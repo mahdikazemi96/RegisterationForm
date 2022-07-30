@@ -16,24 +16,22 @@
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+> This is a beginner level project to teach you:
+- Clean Architecture
+- ASP.NET Core Web Api
+- .NET Core Library
+- Angular
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- .NET Core - version 6
+- Angular - version 13
+- EF Core - version 6
+
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- CRUD Operation
 
 
 ## Screenshots
