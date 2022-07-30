@@ -5,7 +5,7 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [What do you learn in this project?](#what-do-you-learn-in-this-project?)
+* [What do you learn in this project?](#what-do-you-learn-in-this-project)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
