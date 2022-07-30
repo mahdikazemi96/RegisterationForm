@@ -5,6 +5,7 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [What do you learn in this project?](#what-do-you-learn-in-this-project?)
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
@@ -34,9 +35,16 @@
 - CRUD Operation
 
 
+## What do you learn in this project?
+- How to design a multi layers project with clean architecture
+- Build web api application with ASP.NET Core 6
+- Build the web application UI base on Angular 13 
+- Connect the UI to Backend With Angular + TypeScript 
+- How to use RadiButton, Checkbox, DropDown, Input and feed them by api in Angular
+
+
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+![image](https://user-images.githubusercontent.com/30793006/181934783-d6d901a7-102c-4907-9377-7558753a6c51.png)
 
 
 ## Setup
