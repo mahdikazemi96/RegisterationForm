@@ -52,6 +52,7 @@ At the first step we Create a blank solution in visual studio the add the projec
 > a class library with the name *Domain* for our models, dto, ...
 > a class library with the name *Infrastructure* for interfaces such as unitofwork
 > a class library with the name *DAL* to communicate with database
+> a class library with the name *DAL* to communicate with database
 
 
 ## Usage
