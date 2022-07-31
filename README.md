@@ -7,7 +7,7 @@
 * [Features](#features)
 * [What do you learn in this project?](#what-do-you-learn-in-this-project)
 * [Screenshots](#screenshots)
-* [Setup](#setup)
+* [Create Projects](#create-projects)
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
@@ -47,10 +47,9 @@
 ![image](https://user-images.githubusercontent.com/30793006/181934783-d6d901a7-102c-4907-9377-7558753a6c51.png)
 
 
-## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+## Create Projects
+At the first step we Create a blank solution in visual studio the add the projects as follow:
+> a class library with the name *Domain* for our models, dto, ...
 
 
 ## Usage
