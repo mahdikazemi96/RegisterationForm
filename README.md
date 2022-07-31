@@ -50,6 +50,8 @@
 ## Create Projects
 At the first step we Create a blank solution in visual studio the add the projects as follow:
 > a class library with the name *Domain* for our models, dto, ...
+> a class library with the name *Infrastructure* for interfaces such as unitofwork
+> a class library with the name *DAL* to communicate with database
 
 
 ## Usage
