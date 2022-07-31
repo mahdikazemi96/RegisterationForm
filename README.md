@@ -51,11 +51,13 @@
 At the first step we Create a blank solution in visual studio the add the projects as follow:
 > a class library with the name *Domain* for our models, dto, ...
 
-> a class library with the name *Infrastructure* for interfaces such as unitofwork
+> a class library with the name *Infrastructure* for interfaces such as unitofwork and 
 
 > a class library with the name *DAL* to communicate with database
 
-> a class library with the name *DAL* to communicate with database
+> a class library with the name *IoC* to handle our dependency injections in one layer
+
+> a class library with the name *BL* to implement our business roles 
 
 
 ## Usage
