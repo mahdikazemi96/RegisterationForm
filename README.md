@@ -95,6 +95,14 @@ before start we should install necessory packages. install these packages on DAL
 
 > Microsoft.EntityFrameworkCore.Tools
 
+> as you know the database context get the connectin string from the end layer. in this project our context get the database connection string from *Api* layer. so we need to define database connection string in the file *appsettings.json* in *Api* layer. like this:
+  `"ConnectionStrings": {
+    "RegisterationFormDbContext": "Server=.;Database=RegisterationForm;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }`
+
+> now we should connect our context to databse. for this one we should do it in the layer that inject the services(here, IoC layer). 
+
+> at the last step you should inject this config in the end layer.
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
