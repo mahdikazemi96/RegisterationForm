@@ -100,9 +100,14 @@ before start we should install necessory packages. install these packages on DAL
     "RegisterationFormDbContext": "Server=.;Database=RegisterationForm;Trusted_Connection=True;MultipleActiveResultSets=true"
   }`
 
-> now we should connect our context to databse. for this one we should do it in the layer that inject the services(here, IoC layer). 
+> now we should connect our context to databse. for this one we should do it in the layer that injects the services(here, IoC layer). for this we create a class with name DbConfig and use the ef core service to connect our database context to database. like this:
 
-> at the last step you should inject this config in the end layer.
+![image](https://user-images.githubusercontent.com/30793006/182185009-37b606e0-adfe-43fe-8a95-f8696e17bc46.png)
+
+
+> at the last step you should inject this config in the end layer. like this:
+
+`builder.Services.AddDatabaseConfig(configuration);`
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
