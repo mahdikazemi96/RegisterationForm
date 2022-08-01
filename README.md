@@ -78,6 +78,7 @@ We have 3 tables:
 > *PersonPersonality* is the table that keep the data that each person has how many type of personalities.
 
 we want to create these tables by entity framework code first and also we need a model per table to use in our project so we create a class per table just like this picture:
+
 ![image](https://user-images.githubusercontent.com/30793006/182153818-9278e716-1f06-4bee-a85c-194a7000891a.png)
 
 ## Project Status
