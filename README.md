@@ -71,8 +71,14 @@ At the first step we Create a blank solution in visual studio the add the projec
 This is our data diagram:
 ![image](https://user-images.githubusercontent.com/30793006/182148220-c85e0e71-6a47-4ad0-937d-7be609547f6b.png)
 We have 3 tables:
-> *Person* is the table that keep person data.
-> *Personality* is the table that keep the personalities types
+> *Person* is the table that keeps person data.
+
+> *Personality* is the table that keeps the personalities types.(We don't have any form for crud operations on this table and it get feed direct from Sql Server Management Studio)
+
+> *PersonPersonality* is the table that keep the data that each person has how many type of personalities.
+
+we want to create these tables by entity framework code first and also we need a model per table to use in our project so we create a class per table just like this picture:
+![image](https://user-images.githubusercontent.com/30793006/182153818-9278e716-1f06-4bee-a85c-194a7000891a.png)
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
