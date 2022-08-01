@@ -82,8 +82,6 @@ we want to create these tables by entity framework code first and also we need a
 ![image](https://user-images.githubusercontent.com/30793006/182153818-9278e716-1f06-4bee-a85c-194a7000891a.png)
 
 as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
-![image](https://user-images.githubusercontent.com/30793006/182155216-0b46c7e2-f941-4468-b325-d086a20c48c4.png)
-
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
