@@ -9,6 +9,7 @@
 * [Screenshots](#screenshots)
 * [What does this application do?](#What-does-this-application-do)
 * [Create Projects](#create-projects)
+* [Develop Domain Layer](#Develop-Domain-Layer)
 * [Usage](#usage)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
@@ -67,7 +68,7 @@ At the first step we Create a blank solution in visual studio the add the projec
 ![image](https://user-images.githubusercontent.com/30793006/182139351-cc2cc3dc-ec16-4483-bbf5-b91d503200ca.png)
 
 
-## Complete Domain Layer
+## Develop Domain Layer
 This is our data diagram:
 ![image](https://user-images.githubusercontent.com/30793006/182148220-c85e0e71-6a47-4ad0-937d-7be609547f6b.png)
 We have 3 tables:
@@ -83,8 +84,13 @@ we want to create these tables by entity framework code first and also we need a
 
 as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
 
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+## Develop DAL Layer
+Now we want to connect to database. the *DAL* Layer should be responsible for this one.
+before start we should install necessory packages. install these packages on DAL Project:
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
 
 
 ## Room for Improvement
