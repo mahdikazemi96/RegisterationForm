@@ -70,7 +70,9 @@ At the first step we Create a blank solution in visual studio the add the projec
 ## Complete Domain Layer
 This is our data diagram:
 ![image](https://user-images.githubusercontent.com/30793006/182148220-c85e0e71-6a47-4ad0-937d-7be609547f6b.png)
-
+We have 3 tables:
+> *Person* is the table that keep person data.
+> *Personality* is the table that keep the personalities types
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
