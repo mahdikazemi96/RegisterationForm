@@ -10,7 +10,7 @@
 * [What does this application do?](#What-does-this-application-do)
 * [Create Projects](#create-projects)
 * [Develop Domain Layer](#Develop-Domain-Layer)
-* [Usage](#usage)
+* [Connect To Database](#Connect-To-Database)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -84,7 +84,7 @@ we want to create these tables by entity framework code first and also we need a
 
 as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
 
-## Develop DAL Layer
+## Connect to Database
 Now we want to connect to database. the *DAL* Layer should be responsible for this one.
 before start we should install necessory packages. install these packages on DAL Project:
 > Microsoft.EntityFrameworkCore
@@ -105,9 +105,15 @@ before start we should install necessory packages. install these packages on DAL
 ![image](https://user-images.githubusercontent.com/30793006/182185009-37b606e0-adfe-43fe-8a95-f8696e17bc46.png)
 
 
-> at the last step you should inject this config in the end layer. like this:
+> at the next step you should inject this config in the end layer with the path: *Api/Proram.cs* like this:
 
 `builder.Services.AddDatabaseConfig(configuration);`
+
+> now we need create database and tables by ef. before use migration you should install *Microsoft.EntityFrameworkCore.Design* on Api layer because it's needed.
+
+> now you can go to *Package Manager Console* and write the first add migration code like this: *Add-Migrations InitializeDb*
+
+> Congratulations your project is connected to database.
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
