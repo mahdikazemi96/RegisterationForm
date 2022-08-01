@@ -11,7 +11,7 @@
 * [Create Projects](#create-projects)
 * [Develop Domain Layer](#Develop-Domain-Layer)
 * [Connect To Database](#Connect-To-Database)
-* [Project Status](#project-status)
+* [Implement UnitOfWork](#Implement-UnitOfWork)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
@@ -115,7 +115,7 @@ before start we should install necessory packages. install these packages on DAL
 
 > Congratulations your project is connected to database.
 
-## Room for Improvement
+## Implement UnitOfWork
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
