@@ -68,7 +68,9 @@ At the first step we Create a blank solution in visual studio the add the projec
 
 
 ## Complete Domain Layer
-![image](https://user-images.githubusercontent.com/30793006/182146597-e70612d6-ed15-48f8-978a-611c1d438b74.png)
+This is our data diagram:
+![image](https://user-images.githubusercontent.com/30793006/182148220-c85e0e71-6a47-4ad0-937d-7be609547f6b.png)
+
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
