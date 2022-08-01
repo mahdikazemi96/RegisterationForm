@@ -87,10 +87,13 @@ as we don't have any base table for *gender* and *status* in *Person* table so w
 ## Develop DAL Layer
 Now we want to connect to database. the *DAL* Layer should be responsible for this one.
 before start we should install necessory packages. install these packages on DAL Project:
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Design
-Microsoft.EntityFrameworkCore.SqlServer
-Microsoft.EntityFrameworkCore.Tools
+> Microsoft.EntityFrameworkCore
+
+> Microsoft.EntityFrameworkCore.Design
+
+> Microsoft.EntityFrameworkCore.SqlServer
+
+> Microsoft.EntityFrameworkCore.Tools
 
 
 ## Room for Improvement
