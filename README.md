@@ -62,6 +62,10 @@ At the first step we Create a blank solution in visual studio the add the projec
 
 > a class library with the name *BL* to implement our business roles 
 
+> a web api .net core to implement our apis
+
+![image](https://user-images.githubusercontent.com/30793006/182139351-cc2cc3dc-ec16-4483-bbf5-b91d503200ca.png)
+
 
 ## Usage
 How does one go about using it?
