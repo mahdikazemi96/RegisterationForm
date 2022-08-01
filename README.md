@@ -67,12 +67,8 @@ At the first step we Create a blank solution in visual studio the add the projec
 ![image](https://user-images.githubusercontent.com/30793006/182139351-cc2cc3dc-ec16-4483-bbf5-b91d503200ca.png)
 
 
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
+## Complete Domain Layer
+![image](https://user-images.githubusercontent.com/30793006/182146597-e70612d6-ed15-48f8-978a-611c1d438b74.png)
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
