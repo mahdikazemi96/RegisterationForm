@@ -48,7 +48,7 @@
 ![image](https://user-images.githubusercontent.com/30793006/181934783-d6d901a7-102c-4907-9377-7558753a6c51.png)
 
 ## What does this application do?
-this is
+this is a simple singel page application that contains a table and a form. the form has multi type of html inputs and allow you register the person data into database or edit previous data. by the table you can see data or delete them.
 
 ## Create Projects
 At the first step we Create a blank solution in visual studio the add the projects as follow:
