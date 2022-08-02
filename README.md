@@ -120,7 +120,9 @@ We use UnitOfWork pattern to work with data such as (get, write, update or delet
 
 > In the layer *Infrastructure* create a folder with name *IUnitOfWork* then create 2 interfaces one with name IGenericRepository and the other with name IUnitOfWork
 
-> In IGenericRepository you should define all methods 
+> In IGenericRepository you should define all crud methods that you want use in project such as (getById, getAll, Insert, ...) and this class is generic type of *T* that *T* is the name of our table. it means that the *IGenericRepository* can be polymorphism of any model and your methods can operate for any table of database.
+
+> In IUnitOfWork you
 
 Room for improvement:
 - Improvement to be done 1
