@@ -130,6 +130,15 @@ We use UnitOfWork pattern to work with data such as (get, write, update or delet
 
 >>don't forget that IUnitOfWork interface and UnitOfWork class both should inherit from *IDisposable* so when the UnitOfWork finished  with database it can free unmanaged resources.
 
+> at the last ste you should inject the UnitOfWork in *IoC* layer and then in *Api* layer. so Create a class with name UnitOfWorkConfig in *IoC* layer and inject the unitofwork like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182325601-b35054f1-cec3-4f18-818b-d86c83130bed.png)
+
+then inject this class in *Api* layer like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182325716-d78f1127-c798-4c93-9755-fb489a3a23df.png)
+
+
 > You are done with *UnitOfWork*.
 
 ## Acknowledgements
