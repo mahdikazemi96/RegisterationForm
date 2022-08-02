@@ -122,7 +122,10 @@ We use UnitOfWork pattern to work with data such as (get, write, update or delet
 
 > In IGenericRepository you should define all crud methods that you want use in project such as (getById, getAll, Insert, ...) and this class is generic type of *T* that *T* is the name of our table. it means that the *IGenericRepository* can be polymorphism of any model and your methods can operate for any table of database.
 
-> In IUnitOfWork you
+> In IUnitOfWork you should declare instance of IGenericRepository per table of database just like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182314749-6c76c23e-f58c-4553-8e15-053a2819da0a.png)
+
 
 Room for improvement:
 - Improvement to be done 1
