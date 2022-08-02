@@ -116,7 +116,11 @@ before start we should install necessory packages. install these packages on DAL
 > Congratulations your project is connected to database.
 
 ## Implement UnitOfWork
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+We use UnitOfWork pattern to work with data such as (get, write, update or delete) so since the UnitOfWork has 2 parts, the first part is *Interface* and the second part is *Implementation* we put the *Interface* in Infrastructure layer and implement them in the DAL layer.
+
+> In the layer *Infrastructure* create a folder with name *IUnitOfWork* then create 2 interfaces one with name IGenericRepository and the other with name IUnitOfWork
+
+> In IGenericRepository you should define all methods 
 
 Room for improvement:
 - Improvement to be done 1
