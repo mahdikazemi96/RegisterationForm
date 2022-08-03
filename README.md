@@ -11,10 +11,9 @@
 * [Create Projects](#create-projects)
 * [Develop Domain Layer](#Develop-Domain-Layer)
 * [Connect To Database](#Connect-To-Database)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+* [Implement UnitOfWork](#Implement-UnitOfWork)
+* [Implement BL Layer](#Implement-BL-Layer)
+* [Implement Api Layer](#Implement-Api-Layer)
 <!-- * [License](#license) -->
 
 
@@ -24,6 +23,7 @@
 - ASP.NET Core Web Api
 - .NET Core Library
 - Angular
+- Automapper
 
 
 ## Technologies Used
@@ -115,32 +115,87 @@ before start we should install necessory packages. install these packages on DAL
 
 > Congratulations your project is connected to database.
 
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+## Implement UnitOfWork
+We use UnitOfWork pattern to work with data such as (get, write, update or delete) so since the UnitOfWork has 2 parts, the first part is *Interface* and the second part is *Implementation* we put the *Interface* in Infrastructure layer and implement them in the DAL layer.
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+> In the layer *Infrastructure* create a folder with name *IUnitOfWork* then create 2 interfaces one with name IGenericRepository and the other with name IUnitOfWork
 
-To do:
-- Feature to be added 1
-- Feature to be added 2
+> In IGenericRepository you should define all crud methods that you want use in project such as (getById, getAll, Insert, ...) and this class is generic type of *T* that *T* is the name of our table. it means that the *IGenericRepository* can be polymorphism of any model and your methods can operate for any table of database.
+
+> In IUnitOfWork you should declare instance of IGenericRepository per table of database just like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182314749-6c76c23e-f58c-4553-8e15-053a2819da0a.png)
+
+> Ok now it's time to implementation. go to *DAL* layer and create a folder with name *UnitOfWork* the create 2 classes with name GenericRepository and UnitOfWork the implement your interfaces that you made in *Infrastructure* layer.
+
+>>don't forget that IUnitOfWork interface and UnitOfWork class both should inherit from *IDisposable* so when the UnitOfWork finished  with database it can free unmanaged resources.
+
+> at the last ste you should inject the UnitOfWork in *IoC* layer and then in *Api* layer. so Create a class with name UnitOfWorkConfig in *IoC* layer and inject the unitofwork like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182325601-b35054f1-cec3-4f18-818b-d86c83130bed.png)
+
+then inject this class in *Api* layer like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182325716-d78f1127-c798-4c93-9755-fb489a3a23df.png)
 
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+> You are done with *UnitOfWork*.
+
+## Implement BL Layer
+Now it's time to implement *BL* layer according to our business roles and our senarios for *CRUD* operations.
+*Note:* it's not good to return database model to api, it's better to convert your database model to dto (data transfer object).
+it's better to have one or more dtos per senario.
+
+> the first step is installing *Automapper*. why? to convert database model to dto. since the working with data is *DAL* layer duty so we put it in *DAL* layer then install these packages in *DAL* layer: `AutoMapper` and `AutoMapper.Extensions.Microsoft.DependencyInjection` by the nuget package manager.
+
+> after installing *Automaooer* You need to set somthings. 
+- first create a folder with name *AutomapperProfile* in *DAL* layer then create a class with name *MappingProfile*. in this class you must declare what model map to what dto or reverse.
+- second you should inject *Automapper* and your *MappingProfile* class in *IoC* layer as usual. so create a class with name *AutomapperConfig* in *IoC* layer and inject *Automapper* like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182592286-e77ffa56-9145-4b7f-bab7-5466e965b401.png)
+and finally inject this mthod in *Api* layer as we did in previous steps.
+
+> Now it's time to declare our senarios and then implement the suitable methods in *BL* layer. 
+
+- we have a grid in our application that shows every data of person, so we need a mehod that return all persons data and for each person also show the all personalities for that person. so in the *PersonBusiness* class create a method with name *GetAllPersonInfo* then in this method first get all data from *Person* table then map this list to dto then for each record in this list get the titles of this person personalities from *PersonalityBusiness*.
+
+- we have a form that must show all personalities from database. so we need a method that get all personalities from database. so we have a methd with name GetPersonalitiesTitle in *PersonalityBusiness* that do this.
+
+- the user should register person info by the form. so we need a method that gets the data and save it in database. so we create a method with name *InsertPerson* in *PersonBusiness* to register data into database and we should have an other method to insert this person personalities in *PersonPersonality* table so we create an other method with name *InsertRange* in *PersonPeronalityBusiness*  and call it after we inserted person data.
+
+- the user should be able to update person data. so we need 2 methods here one for get the target person data and put it in the form for edit and the other one for get the new data and update previous one. 
+
+    **first** create a method with name *GetPersonById* in *PersonBusiness* to get person data.
+    
+    **second** create a method with name *UpdatePerson* in *PersonBusiness* to update the person data.
+    
+    **third** we need a method with name *DeleteRange* to delete all previous personalities for this person in *PersonPersonalityBusiness*.
+    
+    **fourth** we need a method with name *InsertRange* to insert new selected personalities for this person in *PersonPersonalityBusiness*.
+    
+    **fifth** call the *DeleteRange* and *InsertRange* in method *UpdatePerson*.
+
+- the user should be able to delete the person data. so we want a method to delete the person from database.
+
+before deleting person you should delete his/her personalities from *PersonPersonality* table, so we call *DeleteRange* method from *PersonPersonalityBusiness* before deleting person, then to delete the person create a method with name *DeletePerson* in *PersonBusiness*.
+
+after all these steps don't forget inject your Businesses class in *IoC* layer so create a class with name *BusinessConfig* in *IoC* layer and inject your Businesses here and finally inject it in *Api* layer.
 
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+## Implement Api Layer
+The api layer is communication bridge to out and tis the layer that serve data for other applications that communicate with your project.
+base on our senarios we need 2 controllers one with name *PersonController* and the other with name *PersonalityController*.
+
+we have 5 methods in *PersonController* and 1 method in *PersonalityController* that it's clear what they do.
+
+> we used 4 type of http request in these 2 controllers:
+
+  - `[HttpGet]` : use it when the method is going to deliver data in the output.
+  - `[HttpPost]` : use it when the method is going to get some data from input and save it in database.
+  - `[HttpPut]` : use it when the method is going to get some data and update an already saved data.
+  - `[HttpDelete]` : use it when the method is going to delete some data from database.
 
 
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
 
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+
 
