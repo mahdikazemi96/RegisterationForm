@@ -188,7 +188,7 @@ base on our senarios we need 2 controllers one with name *PersonController* and 
 
 we have 5 methods in *PersonController* and 1 method in *PersonalityController* that it's clear what they do.
 
-> we use 4 type of http request:
+> we used 4 type of http request in these 2 controllers:
 
   - `[HttpGet]` : use it when the method is going to deliver data in the output.
   - `[HttpPost]` : use it when the method is going to get some data from input and save it in database.
