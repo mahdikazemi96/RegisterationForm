@@ -186,6 +186,14 @@ after all these steps don't forget inject your Businesses class in *IoC* layer s
 The api layer is communication bridge to out and tis the layer that serve data for other applications that communicate with your project.
 base on our senarios we need 2 controllers one with name *PersonController* and the other with name *PersonalityController*.
 
+we have 5 methods in *PersonController* and 1 method in *PersonalityController* that it's clear what they do.
+
+> we use 4 type of http request:
+
+  - `[HttpGet]` : use it when the method is going to deliver data in the output.
+  - `[HttpPost]` : use it when the method is going to get some data from input and save it in database.
+  - `[HttpPut]` : use it when the method is going to get some data and update an already saved data.
+  - `[HttpDelete]` : use it when the method is going to delete some data from database.
 
 
 
