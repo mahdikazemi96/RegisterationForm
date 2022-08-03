@@ -12,7 +12,7 @@
 * [Develop Domain Layer](#Develop-Domain-Layer)
 * [Connect To Database](#Connect-To-Database)
 * [Implement UnitOfWork](#Implement-UnitOfWork)
-* [Room for Improvement](#room-for-improvement)
+* [Implement BL Layer](#Implement-BL-Layer)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
@@ -143,8 +143,10 @@ then inject this class in *Api* layer like this:
 
 ## Implement BL Layer
 Now it's time to implement *BL* layer according to our business roles and our senarios for *CRUD* operations.
-> the first step is installing *Automapper*. why? it's not good to return database model to api, it's better to convert your database model to dto (data transfer object).
-it's better to have a dto 
+*Note:* it's not good to return database model to api, it's better to convert your database model to dto (data transfer object).
+it's better to have one or more dtos per senario.
+
+> the first step is installing *Automapper*. why? to convert database model to dto.
 
 
 ## Contact
