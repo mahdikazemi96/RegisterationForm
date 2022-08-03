@@ -156,7 +156,14 @@ it's better to have one or more dtos per senario.
 and finally inject this mthod in *Api* layer as we did in previous steps.
 
 > Now it's time to declare our senarios and then implement the suitable methods in *BL* layer. 
-1- we have a grid in our application that shows every data of person, so we need a mehod that return all persons data and for each person also show the all personalities for that person.
+
+- we have a grid in our application that shows every data of person, so we need a mehod that return all persons data and for each person also show the all personalities for that person.
+
+- we have a form that must show all personalities from database. so we need a method that get all personalities from database.
+
+- the user should register person info by the form. so we need a method that gets the data and save it in databse.
+
+- the user should be able to update person data. so we need 2 methods here one for get the target person data and put it in the form for edit and the other one for get the new data and update previous one.
 
 
 ## Contact
