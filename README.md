@@ -146,7 +146,7 @@ Now it's time to implement *BL* layer according to our business roles and our se
 *Note:* it's not good to return database model to api, it's better to convert your database model to dto (data transfer object).
 it's better to have one or more dtos per senario.
 
-> the first step is installing *Automapper*. why? to convert database model to dto.
+> the first step is installing *Automapper*. why? to convert database model to dto. since the working with data is *DAL* layer duty so we put it in *DAL* layer then install these packages in *DAL* layer: `AutoMapper` and `AutoMapper.Extensions.Microsoft.DependencyInjection` by the nuget package manager.
 
 
 ## Contact
