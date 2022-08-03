@@ -141,11 +141,9 @@ then inject this class in *Api* layer like this:
 
 > You are done with *UnitOfWork*.
 
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+## Implement BL Layer
+Now it's time to implement *BL* layer according to our business roles and our senarios for *CRUD* operations.
+> the first step is installing *Automapper*.
 
 
 ## Contact
