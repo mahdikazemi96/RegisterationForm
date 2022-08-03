@@ -10,12 +10,12 @@ namespace RegisterationForm.Infrastructure.IUnitOfWork
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<T> Get(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
+        T Get(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
         Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
         IList<T> GetAll(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null);
-        Task Insert(T entity);
-        Task InsertRange(IEnumerable<T> entities);
-        Task Delete(object id);
+        void Insert(T entity);
+        void InsertRange(IEnumerable<T> entities);
+        void Delete(object id);
         void DeleteRange(IEnumerable<T> entities);
         void Update(T entity);
     }

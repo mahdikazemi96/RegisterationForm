@@ -12,9 +12,11 @@ namespace RegisterationForm.DAL.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         private readonly RegisterationFormDbContext _context;
+
         private IGenericRepository<Person> _PersonRepository;
         private IGenericRepository<Personality> _PersonalityRepository;
         private IGenericRepository<PersonPersonality> _PersonPersonalityRepository;
+
         public UnitOfWork(RegisterationFormDbContext context)
         {
             _context = context;

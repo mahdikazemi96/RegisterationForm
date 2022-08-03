@@ -20,9 +20,9 @@ namespace RegisterationForm.DAL.UnitOfWork
             _context = context;
             _db = _context.Set<T>();
         }
-        public async Task Delete(object id)
+        public void Delete(object id)
         {
-            T entity = await _db.FindAsync(id);
+            T entity = _db.Find(id);
             _db.Remove(entity);
         }
 
@@ -31,7 +31,7 @@ namespace RegisterationForm.DAL.UnitOfWork
             _db.RemoveRange(entities);
         }
 
-        public async Task<T> Get(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
+        public T Get(Expression<Func<T, bool>> expression, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
         {
             IQueryable<T> query = _db;
             if (include != null)
@@ -39,7 +39,7 @@ namespace RegisterationForm.DAL.UnitOfWork
                 query = include(query);
             }
 
-            return await query.FirstOrDefaultAsync(expression);
+            return query.FirstOrDefault(expression);
         }
 
         public async Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
@@ -72,26 +72,14 @@ namespace RegisterationForm.DAL.UnitOfWork
             return query.ToList();
         }
 
-        public async Task<bool> Any(Expression<Func<T, bool>> expression)
+        public void Insert(T entity)
         {
-            IQueryable<T> query = _db;
-
-            return await query.AnyAsync(expression);
+            _db.AddAsync(entity);
         }
 
-        public async Task Insert(T entity)
+        public void InsertRange(IEnumerable<T> entities)
         {
-            await _db.AddAsync(entity);
-        }
-
-        public void ClearLocal()
-        {
-            _db.Local.Clear();
-        }
-
-        public async Task InsertRange(IEnumerable<T> entities)
-        {
-            await _db.AddRangeAsync(entities);
+             _db.AddRangeAsync(entities);
         }
 
         public void Update(T entity)

@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RegisterationForm.BL\RegisterationForm.BL.csproj" />
     <ProjectReference Include="..\RegisterationForm.DAL\RegisterationForm.DAL.csproj" />
   </ItemGroup>
 
