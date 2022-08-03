@@ -180,6 +180,8 @@ and finally inject this mthod in *Api* layer as we did in previous steps.
 
 before deleting person you should delete his/her personalities from *PersonPersonality* table, so we call *DeleteRange* method from *PersonPersonalityBusiness* before deleting person, then to delete the person create a method with name *DeletePerson* in *PersonBusiness*.
 
+after all these steps don't forget inject your Businesses class in *IoC* layer so create a class with name *BusinessConfig* in *IoC* layer and inject your Businesses here and finally inject it in *Api* layer.
+
 
 ## Contact
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
