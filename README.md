@@ -13,8 +13,7 @@
 * [Connect To Database](#Connect-To-Database)
 * [Implement UnitOfWork](#Implement-UnitOfWork)
 * [Implement BL Layer](#Implement-BL-Layer)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+* [Implement Api Layer](#Implement-Api-Layer)
 <!-- * [License](#license) -->
 
 
@@ -183,15 +182,10 @@ before deleting person you should delete his/her personalities from *PersonPerso
 after all these steps don't forget inject your Businesses class in *IoC* layer so create a class with name *BusinessConfig* in *IoC* layer and inject your Businesses here and finally inject it in *Api* layer.
 
 
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+## Implement Api Layer
+The api layer is communication bridge to out and tis the layer that serve data for other applications that communicate with your project.
+base on our senarios we need 2 controllers one with name *PersonController* and the other with name *PersonalityController*.
 
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
 
 
 
