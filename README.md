@@ -327,7 +327,7 @@ and finally inject this mthod in *Api* layer as we did in previous steps.
 
 - we have a form that must show all personalities from database. so we need a method that get all personalities from database. so we have a methd with name GetPersonalitiesTitle in *PersonalityBusiness* that do this.
 
-- the user should register person info by the form. so we need a method that gets the data and save it in databse.
+- the user should register person info by the form. so we need a method that gets the data and save it in database. so we create a method with name *InsertPerson* in *PersonBusiness* to register data into database and we should have an other method to insert this person personalities in *PersonPersonality* table so we create an other method with name *InsertRange* in *PersonPeronalityBusiness*  and call it after we inserted person data.
 
 - the user should be able to update person data. so we need 2 methods here one for get the target person data and put it in the form for edit and the other one for get the new data and update previous one.
 
