@@ -11,9 +11,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegisterationForm.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegisterationForm.Infrastructure", "RegisterationForm.Infrastructure\RegisterationForm.Infrastructure.csproj", "{D2C3E4F3-B32F-4538-8318-681352A14046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterationForm.IoC", "RegisterationForm.IoC\RegisterationForm.IoC.csproj", "{1C924173-E573-47FB-80C3-44D5F5ADB799}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegisterationForm.IoC", "RegisterationForm.IoC\RegisterationForm.IoC.csproj", "{1C924173-E573-47FB-80C3-44D5F5ADB799}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterationForm.Api", "RegisterationForm.Api\RegisterationForm.Api.csproj", "{CC7C672D-C74A-4537-8C13-676A36C53798}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegisterationForm.Api", "RegisterationForm.Api\RegisterationForm.Api.csproj", "{CC7C672D-C74A-4537-8C13-676A36C53798}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RegisterationForm.UI", "RegisterationForm.UI\", "{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7631"
+		Debug.AspNetCompiler.PhysicalPath = "RegisterationForm.UI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7631\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7631"
+		Release.AspNetCompiler.PhysicalPath = "RegisterationForm.UI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7631\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "7631"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +65,10 @@ Global
 		{CC7C672D-C74A-4537-8C13-676A36C53798}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7C672D-C74A-4537-8C13-676A36C53798}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7C672D-C74A-4537-8C13-676A36C53798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
