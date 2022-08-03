@@ -17,6 +17,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDatabaseConfig(configuration);
 
+builder.Services.AddUnitOfWork(configuration);
+builder.Services.AddAutomapper(configuration);
+builder.Services.AddBsinesses(configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

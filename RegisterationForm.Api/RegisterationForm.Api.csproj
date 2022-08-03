@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RegisterationForm.DAL\RegisterationForm.DAL.csproj" />
     <ProjectReference Include="..\RegisterationForm.IoC\RegisterationForm.IoC.csproj" />
   </ItemGroup>
