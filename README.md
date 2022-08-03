@@ -169,7 +169,7 @@ and finally inject this mthod in *Api* layer as we did in previous steps.
     **second** create a method with name *UpdatePerson* in *PersonBusiness* to update the person data.
     **third** we need a method with name *DeleteRange* to delete all previous personalities for this person in *PersonPersonalityBusiness*.
     **fourth** we need a method with name *InsertRange* to insert new selected personalities for this person in *PersonPersonalityBusiness*.
-    
+    **fifth** call the *DeleteRange* and *InsertRange* in method *UpdatePerson*.
 
 - the user should be able to delete the person data. so we want a method to delete the person from database.
 
