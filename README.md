@@ -323,9 +323,9 @@ and finally inject this mthod in *Api* layer as we did in previous steps.
 
 > Now it's time to declare our senarios and then implement the suitable methods in *BL* layer. 
 
-- we have a grid in our application that shows every data of person, so we need a mehod that return all persons data and for each person also show the all personalities for that person. so in the *PersonBusiness* class create a method with name *GetAllPersonInfo* then in this method first get all data from *Person* table then map this list to dto then for each record in this list get the titles of this person personalities from jj
+- we have a grid in our application that shows every data of person, so we need a mehod that return all persons data and for each person also show the all personalities for that person. so in the *PersonBusiness* class create a method with name *GetAllPersonInfo* then in this method first get all data from *Person* table then map this list to dto then for each record in this list get the titles of this person personalities from *PersonalityBusiness*.
 
-- we have a form that must show all personalities from database. so we need a method that get all personalities from database.
+- we have a form that must show all personalities from database. so we need a method that get all personalities from database. so we have a methd with name GetPersonalitiesTitle in *PersonalityBusiness* that do this.
 
 - the user should register person info by the form. so we need a method that gets the data and save it in databse.
 
