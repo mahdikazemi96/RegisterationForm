@@ -178,6 +178,8 @@ and finally inject this mthod in *Api* layer as we did in previous steps.
 
 - the user should be able to delete the person data. so we want a method to delete the person from database.
 
+before deleting person you should delete his/her personalities from *PersonPersonality* table, so we call *DeleteRange* method before deleting person, then to delete the person create a method with name *DeletePerson* in
+
 
 ## Contact
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
