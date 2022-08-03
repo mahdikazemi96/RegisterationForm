@@ -155,6 +155,8 @@ it's better to have one or more dtos per senario.
 ![image](https://user-images.githubusercontent.com/30793006/182592286-e77ffa56-9145-4b7f-bab7-5466e965b401.png)
 and finally inject this mthod in *Api* layer as we did in previous steps.
 
+> Now it's time to declare our senarios and then implement the suitable methods in *BL* layer. 
+
 
 ## Contact
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
