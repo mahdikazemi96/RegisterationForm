@@ -148,6 +148,13 @@ it's better to have one or more dtos per senario.
 
 > the first step is installing *Automapper*. why? to convert database model to dto. since the working with data is *DAL* layer duty so we put it in *DAL* layer then install these packages in *DAL* layer: `AutoMapper` and `AutoMapper.Extensions.Microsoft.DependencyInjection` by the nuget package manager.
 
+> after installing *Automaooer* You need to set somthings. 
+- first create a folder with name *AutomapperProfile* in *DAL* layer then create a class with name *MappingProfile*. in this class you must declare what model map to what dto or reverse.
+- second you should inject *Automapper* and your *MappingProfile* class in *IoC* layer as usual. so create a class with name *AutomapperConfig* in *IoC* layer and inject *Automapper* like this:
+
+![image](https://user-images.githubusercontent.com/30793006/182592286-e77ffa56-9145-4b7f-bab7-5466e965b401.png)
+and finally inject this mthod in *Api* layer as we did in previous steps.
+
 
 ## Contact
 Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
