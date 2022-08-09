@@ -15,7 +15,7 @@
 * [Implement UnitOfWork](#Implement-UnitOfWork)
 * [Implement BL Layer](#Implement-BL-Layer)
 * [Implement Api Layer](#Implement-Api-Layer)
-* [Implement UI Layer](#Implement-UI-Layer)
+* [Initializing UI Layer](#Implement-UI-Layer)
 <!-- * [License](#license) -->
 
 
@@ -198,7 +198,7 @@ we have 5 methods in *PersonController* and 1 method in *PersonalityController* 
   - `[HttpDelete]` : use it when the method is going to delete some data from database.
 
 
-## Implement UI Layer
+## Initializing UI Layer
 We are completely done about the backend so now it's turn to implement the UI, let's go.
 
 I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend. 
@@ -213,7 +213,7 @@ So follow these steps:
   - would you like to add angular routing? *press y*
   - which stylesheet format would you like to use? *select css*
 - go to the path `RegisterationForm.UI/UI/src` and the file *index.html* then put the bootstrap stylesheets link in the header:
-- 
+
   `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">`
   
   `<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />`
@@ -222,6 +222,7 @@ So follow these steps:
   
   `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>`
   
+  now we are done with initializing the UI. the next step is implementing this layer.
 
 
 
