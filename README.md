@@ -1,3 +1,4 @@
+
 # RegisterationForm 
 > Clean Architecture + ASP.NET Core 6 Web API + .NET Core 6 Class Library + Angular 13
 
@@ -199,6 +200,12 @@ we have 5 methods in *PersonController* and 1 method in *PersonalityController* 
 
 ## Implement UI Layer
 We are completely done about the backend so now it's turn to implement the UI, let's go.
+
+I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend. 
+
+So follow these steps:
+
+-
 
 
 
