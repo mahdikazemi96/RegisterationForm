@@ -208,7 +208,11 @@ So follow these steps:
 - to run angular app you need to install nodejs so go to https://nodejs.org/en/download/ and download then install it.
 - after installing nodejs you should angular cli to be able to complie angular code. you can install it with this command `npm install -g @angular/cli`.
 - create a folder with name *RegisterationForm.UI*.
-- 
+- run powershell with *administrator* mode and route to the *RegisterationForm.UI* path then execute the command `ng new UI`.
+- after executing the command it starts to download necessory files and asks some questions as follow:
+  - would you like to add angular routing? *press y*
+  - which stylesheet format would you like to use? *select css*
+
 
 
 
