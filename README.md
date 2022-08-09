@@ -222,7 +222,7 @@ So follow these steps:
   
   `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>`
   
-  now we are done with initializing the UI. the next step is implementing this layer.
+#### now we are done with initializing the UI. the next step is implementing this layer.
 
 
 
