@@ -205,7 +205,10 @@ I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend.
 
 So follow these steps:
 
--
+- to run angular app you need to install nodejs so go to https://nodejs.org/en/download/ and download then install it.
+- after installing nodejs you should angular cli to be able to complie angular code. you can install it with this command `npm install -g @angular/cli`.
+- create a folder with name *RegisterationForm.UI*.
+- 
 
 
 
