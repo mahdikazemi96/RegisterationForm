@@ -14,6 +14,7 @@
 * [Implement UnitOfWork](#Implement-UnitOfWork)
 * [Implement BL Layer](#Implement-BL-Layer)
 * [Implement Api Layer](#Implement-Api-Layer)
+* [Implement UI Layer](#Implement-UI-Layer)
 <!-- * [License](#license) -->
 
 
@@ -195,6 +196,9 @@ we have 5 methods in *PersonController* and 1 method in *PersonalityController* 
   - `[HttpPut]` : use it when the method is going to get some data and update an already saved data.
   - `[HttpDelete]` : use it when the method is going to delete some data from database.
 
+
+## Implement UI Layer
+We are completely done about the backend so now it's turn to implement the UI, let's go.
 
 
 
