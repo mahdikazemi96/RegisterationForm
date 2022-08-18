@@ -237,4 +237,10 @@ one of the advantages of angular is modularity. I mean you can divide your appli
 
 for any command that you want execute in VS Code you should execute it in terminal window, for this go to **Terminal >>> New Terminal** in VS Code.
 
+route to *Person* path: `cd src/app/person`
+
+create a component for the table with this command: `ng g c person-info` in this component we will implement our table
+
+create a component for the form with this command: `ng g c person-register` in this component we will implement our form to register and update the registerd person
+
 
