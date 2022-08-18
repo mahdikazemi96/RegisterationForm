@@ -226,6 +226,7 @@ So follow these steps:
 #### now we are done with initializing the UI. the next step is implementing this layer.
 
 ## Implement UI Layer
-Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>
+Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
+one of the advantages of angular is modularity. I mean you can divide your application to some seprate parts that each one of them do their certain job, we call each one of these parts a **Component** in angular.
 
