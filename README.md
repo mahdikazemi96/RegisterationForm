@@ -248,4 +248,4 @@ route to *Person* path: `cd src/app/person`
 
 - also we need  folder with the name: **service**. we will create some services to connect to our backend and do *CRUD* operations. so create it in this path: `src/app/person`
 
-
+### Implement Person Info Table
