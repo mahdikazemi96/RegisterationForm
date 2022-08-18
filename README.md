@@ -213,7 +213,8 @@ So follow these steps:
 - after executing the command it starts to download necessory files and asks some questions as follow:
   - would you like to add angular routing? *press y*
   - which stylesheet format would you like to use? *select css*
-- go to the path `RegisterationForm.UI/UI/src` and the file *index.html* then put the bootstrap stylesheets link in the header:
+- I use **Visual Studio Code** to develop my angular app, so open the VS Code go to *File >>> Open Folder* then route to *PersonRegisterationForm.UI/UI* and click the *Select Folder* button, then you can see your angular app in the VS Code.
+- go to the path `/src` in VS Code and open the file *index.html* then put the bootstrap stylesheets link in the header:
 
   `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">`
   
@@ -228,5 +229,12 @@ So follow these steps:
 ## Implement UI Layer
 Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
+all of my application business is arroud of *Person* stuffs so I Create a folder with name **Person** in my project and put all of stuffs in this folder.
+right click on the */src/app* folder and then select **New Folder** and rename to **Person**.
+#### remember that all of your stuffs should be in */src/app* folder.
+
 one of the advantages of angular is modularity. I mean you can divide your application to some seprate parts that each one of them do their certain job, we call each one of these parts a **Component** in angular.
+
+for any command that you want execute in VS Code you should execute it in terminal window, for this go to **Terminal >>> New Terminal** in VS Code.
+
 
