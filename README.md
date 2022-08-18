@@ -15,7 +15,8 @@
 * [Implement UnitOfWork](#Implement-UnitOfWork)
 * [Implement BL Layer](#Implement-BL-Layer)
 * [Implement Api Layer](#Implement-Api-Layer)
-* [Initializing UI Layer](#Initializing-UI-Layer)
+* [Initialize UI Layer](#Initialize-UI-Layer)
+* [Implement UI Layer](#Implement-UI-Layer)
 <!-- * [License](#license) -->
 
 
@@ -198,7 +199,7 @@ we have 5 methods in *PersonController* and 1 method in *PersonalityController* 
   - `[HttpDelete]` : use it when the method is going to delete some data from database.
 
 
-## Initializing UI Layer
+## Initialize UI Layer
 We are completely done about the backend so now it's turn to implement the UI, let's go.
 
 I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend. 
@@ -224,7 +225,7 @@ So follow these steps:
   
 #### now we are done with initializing the UI. the next step is implementing this layer.
 
-
-
+## Implement UI Layer
+Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like 
 
 
