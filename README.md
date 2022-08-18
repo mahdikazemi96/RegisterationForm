@@ -17,6 +17,7 @@
 * [Implement Api Layer](#Implement-Api-Layer)
 * [Initialize UI Layer](#Initialize-UI-Layer)
 * [Implement UI Layer](#Implement-UI-Layer)
+* * * [Implement Person Info Table](#Implement-Person-Info-Table)
 <!-- * [License](#license) -->
 
 
