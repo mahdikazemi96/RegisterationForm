@@ -206,6 +206,8 @@ We are completely done about the backend so now it's turn to implement the UI, l
 
 I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend. 
 
+as you know *Angular*  is based on *Typescript*. so we use *Typescript* language to develop this angular app and also most of or files type are *Typescript*.
+
 So follow these steps:
 
 - to run angular app you need to install nodejs so go to https://nodejs.org/en/download/ and download then install it.
@@ -252,7 +254,7 @@ route to *Person* path: `cd src/app/person`
 ### Create Models
 as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section</a> we had a model for *Person* an other model for *Perssonality* and we had two *Enums* for *Gender* and *Status* so we create these four models in our angular app.
 
-> right click on the *model* folder in the route *src/app/person* and select *New File* then rename it to *Person.ts*.
+> right click on the *model* folder in the route *src/app/person* and select *New File* then rename it to *Person.ts*. the *.ts* extension show that this file type is *Typescript*.
 
 ### Implement Person Info Table
 
