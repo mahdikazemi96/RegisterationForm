@@ -250,6 +250,9 @@ route to *Person* path: `cd src/app/person`
 - create a component for the form with this command: `ng g c person-register` in this component we will implement our form to register and update the registerd person
 
 ### Create Models
+as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section</a> we had a model for *Person* an other model for *Perssonality* and we had two *Enums* for *Gender* and *Status* so we create these four models in our angular app.
+
+> right click on the
 
 ### Implement Person Info Table
 
