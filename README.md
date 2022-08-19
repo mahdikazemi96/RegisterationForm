@@ -252,7 +252,7 @@ route to *Person* path: `cd src/app/person`
 ### Create Models
 as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section</a> we had a model for *Person* an other model for *Perssonality* and we had two *Enums* for *Gender* and *Status* so we create these four models in our angular app.
 
-> right click on the
+> right click on the *model* folder in the route *src/app/person* and select *New File* then rename it to *Person.ts*.
 
 ### Implement Person Info Table
 
