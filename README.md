@@ -258,7 +258,7 @@ as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section<
 
 - create a model for *Status*, *Person*, *Personality* like previous step.
 
-> in the *Person* model I put two more 
+> in the *Person* model I put two prp
 
 ### Implement Person Info Table
 
