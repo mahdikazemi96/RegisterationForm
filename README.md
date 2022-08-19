@@ -17,6 +17,7 @@
 * [Implement Api Layer](#Implement-Api-Layer)
 * [Initialize UI Layer](#Initialize-UI-Layer)
 * [Implement UI Layer](#Implement-UI-Layer)
+  * [Create Models](#Create-Models)
   * [Implement Person Info Table](#Implement-Person-Info-Table)
 <!-- * [License](#license) -->
 
@@ -240,13 +241,15 @@ for any command that you want execute in VS Code you should execute it in termin
 
 route to *Person* path: `cd src/app/person`
 
+- we need to have some models to work with data in our angular app so create a new folder with name **model** in the path: `src/app/person`
+
+- also we need  folder with the name: **service**. we will create some services to connect to our backend and do *CRUD* operations. so create it in this path: `src/app/person`
+
 - create a component for the table with this command: `ng g c person-info` in this component we will implement our table
 
 - create a component for the form with this command: `ng g c person-register` in this component we will implement our form to register and update the registerd person
 
-- we need to have some models to work with data in our angular app so create a new folder with name **model** in the path: `src/app/person`
-
-- also we need  folder with the name: **service**. we will create some services to connect to our backend and do *CRUD* operations. so create it in this path: `src/app/person`
+### Create Models
 
 ### Implement Person Info Table
 
