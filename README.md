@@ -228,7 +228,7 @@ So follow these steps:
 #### now we are done with initializing the UI. the next step is implementing this layer.
 
 ## Implement UI Layer
-Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
+Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
 all of my application business is arroud of *Person* stuffs so I Create a folder with name **Person** in my project and put all of stuffs in this folder.
 right click on the */src/app* folder and then select **New Folder** and rename to **Person**.
