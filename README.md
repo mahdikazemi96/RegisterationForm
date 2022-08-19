@@ -87,7 +87,9 @@ we want to create these tables by entity framework code first and also we need a
 
 ![image](https://user-images.githubusercontent.com/30793006/182153818-9278e716-1f06-4bee-a85c-194a7000891a.png)
 
-as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
+> in the *Person* model I put two properties with names: **personalities** and **personalitiesIds**. the **personalities** is to combine all person personality in one string and show it in table and the **personalitiesIds** is use to when we want edit one person info. as we do not save these properties in database so I used the *[NotMapped]* for these propeties.
+
+> as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
 
 ## Connect to Database
 Now we want to connect to database. the *DAL* Layer should be responsible for this one.
@@ -258,7 +260,6 @@ as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section<
 
 - create a model for *Status*, *Person*, *Personality* like previous step.
 
-> in the *Person* model I put two prp
 
 ### Implement Person Info Table
 
