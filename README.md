@@ -18,6 +18,7 @@
 * [Initialize UI Layer](#Initialize-UI-Layer)
 * [Implement UI Layer](#Implement-UI-Layer)
   * [Create Models](#Create-Models)
+  * [Implement Service Layer](#Implement-Service-Layer)
   * [Implement Person Info Table](#Implement-Person-Info-Table)
 <!-- * [License](#license) -->
 
@@ -258,8 +259,29 @@ as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section<
 
 - right click on the *model* folder in the route *src/app/person* and select *New File* then rename it to *Gender.ts*. the *.ts* extension show that this file type is *Typescript*. and write an *Enum* like the *Enum* you created in the backend.
 
-- create a model for *Status*, *Person*, *Personality* like previous step.
+- create a model for *Status*, *Person*, *Personality* like previous step. (look at the source code)
 
+### Implement Service Layer
+We create services in angular app to comunicate to server and send *CRUD* request such as *add new person* , *read all added person* , ...
+
+in this project we need two services one for person and the other one for personality.
+
+ok so execute these command to create your services:
+
+`ng g s person-service` and `ng g s personality-service`
+
+> first we implement the person-service
+- add HttpClient library to this service: `import { HttpClient } from '@angular/common/http'` this library lets you to send http request to server.
+- inject this library in the *person-service* constructor to can use it.
+- in this service we work with an object of *Person* or an object of a *List of Person* so we create an object for each one of them. just like this:
+
+`public person: Person = new Person();' and 'public allPerson: Person[] = [];'
+
+- create an object to declare server url: `private readonly baseUrl: string = 'http://localhost:18359/api/people'` this is the address of my api application.
+
+- create 4 method to do the *CRUD* operation.
+
+- please note that the *person object in this service will be initialize in our components such as *person-info component* or *person-registor component*, but the *allPerson* object initializes in this service by the *get()* method. so we send the *person* object to the server wich initialized in the *person-registor component* and initialize the *allPerson* in this service and show it in the table by *person-info component*.(please see the code)
 
 ### Implement Person Info Table
 
