@@ -276,7 +276,7 @@ ok so execute these command to create your services:
 - inject this library in the *person-service* constructor to can use it.
 - in this service we work with an object of *Person* or an object of a *List of Person* so we create an object for each one of them. just like this:
 
-`public person: Person = new Person();` and `public allPerson: Person[] = [];`
+`public person: Person = new Person();` and `public allPerson: Person[] = [];` we keep our data in these two objects.
 
 - create an object to declare server url: `private readonly baseUrl: string = 'http://localhost:18359/api/people'` this is the address of my api application.
 
@@ -290,7 +290,18 @@ ok so execute these command to create your services:
 Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
 ### Implement Person Info Table
-we need a table to show all of our person registerd in database so we need a part in our angular app that can show a table with all person data an can use the infrustructure layer to connect to server side app. for this we create a component with this command and name it *person-info*:
+we need a table to show all of our person registerd in database so we need a part in our angular app that can show a table with all person data an can use the infrustructure layer to connect to server side app. for this we create a component with this command and name it *person-info* in the path **src/app/person**:
 
 `ng g c person-info`
 
+now you have a folder with name *person-info* in your angular app. let's start with *person-info.component.ts* file in this folder:
+
+- first import the *person, gender, status models* , *PersonServiceService* and *PersonalityServiceService* we are gonna work with them in this part.
+- inject the *PersonService* and *PersonalityService* in the constructor to can call them in your app.
+- create an object from *Gender* model and the other from *Status* model to can map enum to proper text in the *UI*.
+![image](https://user-images.githubusercontent.com/30793006/187890564-76640b90-4940-4714-ad97-e7ed66cd66d4.png)
+
+> in this class you see a built in method with name *ngOnInit()* method, this method is some thing like *constructor* but we use the constructor to inject the dependencies and use the *ngOnInit()* for all the initialization/declaration.
+- so in the *ngOnInit()* we just call the *get()* method to get our table feed.(please see the code)
+- now go to path: `src/app/person/person-info` and open the file *person-info.component.html* and write blow code:
+![image](https://user-images.githubusercontent.com/30793006/187896167-a1f270f0-8d12-4357-854d-7d51cc601354.png)
