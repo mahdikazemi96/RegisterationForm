@@ -305,3 +305,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - so in the *ngOnInit()* we just call the *get()* method to get our table feed.(please see the code)
 - now go to path: `src/app/person/person-info` and open the file *person-info.component.html* and write blow code:
 ![image](https://user-images.githubusercontent.com/30793006/187896167-a1f270f0-8d12-4357-854d-7d51cc601354.png)
+> as you see I used *ngFor* in the *<tbody>*, we use *ngFor* to create **loops** and here we have an object of a list of *person* in *person-service* and we want to create a loop on this object so we use *ngFor*. 
+> as I said in previous steps the person gender and status are type of enum and when you get all person from api the server side send gender and status as enum to your angular application and you should map this enum to text, for this one I used the objects that I created in *person-info.component.ts* and map the enum to text in the *UI* just like this:
+![image](https://user-images.githubusercontent.com/30793006/187903315-c8749e49-0361-40b2-b0b7-b432917f7102.png)
+> in the last row we have two operational button to delete and edit person and we have two methods to do these jobs and assign these methods to these buttons via *(click)* syntax it means when ever the button was clicked fire this method. just like this: `(click)="deletePerson(person.id)"`
+
