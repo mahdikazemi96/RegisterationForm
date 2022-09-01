@@ -275,7 +275,7 @@ ok so execute these command to create your services:
 - inject this library in the *person-service* constructor to can use it.
 - in this service we work with an object of *Person* or an object of a *List of Person* so we create an object for each one of them. just like this:
 
-`public person: Person = new Person();' and 'public allPerson: Person[] = [];'
+`public person: Person = new Person();` and `public allPerson: Person[] = [];`
 
 - create an object to declare server url: `private readonly baseUrl: string = 'http://localhost:18359/api/people'` this is the address of my api application.
 
