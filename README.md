@@ -16,9 +16,10 @@
 * [Implement BL Layer](#Implement-BL-Layer)
 * [Implement Api Layer](#Implement-Api-Layer)
 * [Initialize UI Layer](#Initialize-UI-Layer)
-* [Implement UI Layer](#Implement-UI-Layer)
+* [Implement Angular App Infrustructure](#Implement-Angular-App-Infrustructure)
   * [Create Models](#Create-Models)
   * [Implement Service Layer](#Implement-Service-Layer)
+* [Implement UI Layer](#Implement-UI-Layer)
   * [Implement Person Info Table](#Implement-Person-Info-Table)
 <!-- * [License](#license) -->
 
@@ -233,8 +234,8 @@ So follow these steps:
   
 #### now we are done with initializing the UI. the next step is implementing this layer.
 
-## Implement UI Layer
-Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
+## Implement Angular App Infrustructure
+when you want to connect an angular app to a server side application you need an infrustructure to do it for you, so we create some infrustructures to connect our angular app to our api application in this part.
 
 all of my application business is arroud of *Person* stuffs so I Create a folder with name **Person** in my project and put all of stuffs in this folder.
 right click on the */src/app* folder and then select **New Folder** and rename to **Person**.
@@ -285,6 +286,11 @@ ok so execute these command to create your services:
 
 > second we implement the personality-service:
 - this is just as like as *person-service* but we have only a *get()* method to initialize a list of *all personalities* to show in the *registeration form*.(please see the code)
+## Implement UI Layer
+Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
 ### Implement Person Info Table
+we need a table to show all of our person registerd in database so we need a part in our angular app that can show a table with all person data an can use the infrustructure layer to connect to server side app. for this we create a component with this command and name it *person-info*:
+
+`ng g c person-info`
 
