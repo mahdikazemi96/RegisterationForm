@@ -317,3 +317,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
 > in the last row we have two operational button to delete and edit person and we have two methods to do these jobs and assign these methods to these buttons via *(click)* syntax it means when ever the button was clicked fire this method. just like this: `(click)="deletePerson(person.id)"`
 
+**now we should implement the delete person method**
+
+- again go to *person-info.component.ts* declare a method with name: *deletePerson* and gets an *Id* parameter and send it to *person-service* delete method. the *Id* parameter is type of *number* or *string* and this is one of *Angular* ability that you can have a parameter or an object with multiple types. you can consider just one type.
+ 
+- we will implement the *showPerson()* method after *person-register* implementation.
