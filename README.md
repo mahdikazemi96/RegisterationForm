@@ -281,7 +281,7 @@ ok so execute these command to create your services:
 
 - create 4 method to do the *CRUD* operation.
 
-- please note that the *person object in this service will be initialize in our components such as *person-info component* or *person-registor component*, but the *allPerson* object initializes in this service by the *get()* method. so we send the *person* object to the server wich initialized in the *person-registor component* and initialize the *allPerson* in this service and show it in the table by *person-info component*.(please see the code)
+- please note that the *person* object in this service will be initialize in our components such as *person-info component* or *person-registor component*, but the *allPerson* object initializes in this service by the *get()* method. so we send the *person* object to the server wich initialized in the *person-registor component* and initialize the *allPerson* in this service and show it in the table by *person-info component*.(please see the code)
 
 ### Implement Person Info Table
 
