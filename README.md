@@ -21,6 +21,7 @@
   * [Implement Service Layer](#Implement-Service-Layer)
 * [Implement UI Layer](#Implement-UI-Layer)
   * [Implement Person Info Table](#Implement-Person-Info-Table)
+  * [Implement Person Registeration Form](#Implement-Person-Registeration-Form)
 <!-- * [License](#license) -->
 
 
@@ -322,3 +323,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - again go to *person-info.component.ts* declare a method with name: *deletePerson* and gets an *Id* parameter and send it to *person-service* delete method. the *Id* parameter is type of *number* or *string* and this is one of *Angular* ability that you can have a parameter or an object with multiple types. you can consider just one type.
  
 - we will implement the *showPerson()* method after *person-register* implementation.
+ 
+ ### Implement Person Registeration Form
+ in this section we need a form with multi types of html inputs to add new person or edit previous person added. so create a new component with name: `person-register` with this command: `ng g c person-register`.
+ 
+ - 
