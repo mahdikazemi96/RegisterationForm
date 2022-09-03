@@ -335,3 +335,6 @@ now you have a folder with name *person-info* in your angular app. let's start w
  > we have a form and because I want to access the form in all of other parts of the form so I declare a `#form` as angular model for access in the html file just like this: `#form="ngForm"`
 
  > I want to send all form inputs data to the server so I used angular `(submit)` event and defined a *submitPerson()* method to send form data to the *person-registor.component.ts*.
+ 
+- `<input type="hidden" name="id" [value]="service.person.id">`
+ 
