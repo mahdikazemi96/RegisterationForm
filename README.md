@@ -369,3 +369,5 @@ now you have a folder with name *person-info* in your angular app. let's start w
                     <input class="form-check-input" type="checkbox"  [value]=""  required  (change)="onChange(personality.id,$any($event.target)?.checked)" id="chb{{personality.id}}">
                     <label class="form-check-label" for="inlineRadio1">{{personality.title}}</label>
                 </div>`
+   > we generate the checkboxes by the given data in *personality-service* from server. the code: `personalitySevice.allPersonality` 
+   > we use `(change)="onChange(personality.id,$any($event.target)?.checked)"` to send the personality id and the checkbox status to `person-registor.component.ts` and define a method with the name: `onChange` in the `person-registor.component.ts` file.
