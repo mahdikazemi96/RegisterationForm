@@ -351,8 +351,4 @@ now you have a folder with name *person-info* in your angular app. let's start w
 
 - for gender I used dropdown list to show you how can you use dropdown in angular:
  
-  `<select [(ngModel)]="service.person.gender" name="gender" id="gender" #gender="ngModel"  class="form-select" required [class.invalid]="gender.invalid &#038;&#038; gender.touched">
- 
-      <option *ngFor="let key of genders" [ngValue]="key">{{enums[key]}}</option>
- 
-   </select>`
+  `<select [(ngModel)]="service.person.gender" name="gender" id="gender" #gender="ngModel"  class="form-select" required [class.invalid]="gender.invalid &#038;&#038; gender.touched"><br/><option *ngFor="let key of genders" [ngValue]="key">{{enums[key]}}</option></select>`
