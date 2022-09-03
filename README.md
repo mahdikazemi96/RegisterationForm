@@ -341,5 +341,4 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   > to fill this input I used `[value]` angular property binding  to bind the person id initialized in the *person-service*
 
-- `<input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" #name="ngModel" [(ngModel)]="service.person.name"
-                required minlength="3" maxlength="10" [class.invalid]="name.invalid &#038;&#038; name.touched">`
+- `<input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" #name="ngModel" [(ngModel)]="service.person.name" required minlength="3" maxlength="10" [class.invalid]="name.invalid &#038;&#038; name.touched">`
