@@ -364,6 +364,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - for status we use the radio buttons and it's almost like the dropdownlist you can understand it by reading the code.
  
 - to show the personalities and the user can select each personality we use the *checkboxes*:
+ 
   `                <div class="form-check form-check-inline" *ngFor="let personality of personalitySevice.allPersonality">
                     <input class="form-check-input" type="checkbox"  [value]=""  required  (change)="onChange(personality.id,$any($event.target)?.checked)" id="chb{{personality.id}}">
                     <label class="form-check-label" for="inlineRadio1">{{personality.title}}</label>
