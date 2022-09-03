@@ -337,4 +337,9 @@ now you have a folder with name *person-info* in your angular app. let's start w
   > I want to send all form inputs data to the server so I used angular `(submit)` event and defined a *submitPerson()* method to send form data to the *person-registor.component.ts*.
  
 - `<input type="hidden" name="id" [value]="service.person.id">`
+  > as where as the *person id* is auto generated so we do not need to generate it but we need send the *id* when we want use this form to edit person so we need to this input to keep *id* and send it to backend and because we fill this input by the own application and the *User* doesn't fill it so we make it hidden.
  
+  > to fill this input I used `[value]` angular property binding  to bind the person id initialized in the *person-service*
+
+- `<input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" #name="ngModel" [(ngModel)]="service.person.name"
+                required minlength="3" maxlength="10" [class.invalid]="name.invalid &#038;&#038; name.touched">`
