@@ -348,3 +348,9 @@ now you have a folder with name *person-info* in your angular app. let's start w
   > the `[(ngModel)]="service.person.name"` is used to bind the value of this input to the person that is already generated in *person-service*, with this method you can access the value inserted by user in the *person-register.component.ts* and reverse.
  
   > the `[class.invalid]` is an Angular validtor that indicates the considered input changes to *red* coller when ever it was invalid, you should declare the invalidity situation in this validator and I declaed as `name.invalid &#038;&#038; name.touched` and it means when ever the input with '#name' ngModel was empty or the min length was less than 3 or more than 10 character make this input red.
+
+- for gender I used dropdown list to show you how can you use dropdown in angular:
+ 
+`<select [(ngModel)]="service.person.gender" name="gender" id="gender" #gender="ngModel"  class="form-select" required [class.invalid]="gender.invalid &#038;&#038; gender.touched">
+      <option *ngFor="let key of genders" [ngValue]="key">{{enums[key]}}</option>
+ </select>`
