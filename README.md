@@ -357,5 +357,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
  ![image](https://user-images.githubusercontent.com/30793006/188270476-a33d9dae-b67b-475a-a258-86b62d1144d6.png)
 
- we will explain about `person-registor.component.ts` in the next section.
+  > we will explain about `person-registor.component.ts` in the next section.
+ 
+  > so we create a loop with `ngFor` on genders object to generate dropdown list items and use `{{enums[key]}}` to map enum to text and show it to user.
  
