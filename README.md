@@ -352,3 +352,10 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - for gender I used dropdown list to show you how can you use dropdown in angular:
  
   `<select [(ngModel)]="service.person.gender" name="gender" id="gender" #gender="ngModel"  class="form-select" required [class.invalid]="gender.invalid &#038;&#038; gender.touched"><option *ngFor="let key of genders" [ngValue]="key">{{enums[key]}}</option></select>`
+ 
+  > in *option tag* we should send the gender id to backend but show the gender title to user so we create an *object* of array of numbers and initialize it with gender ids and create an *object* of *gender* model in `person-registor.component.ts` to map the enum to text in the *UI*. just like this:
+ 
+ ![image](https://user-images.githubusercontent.com/30793006/188270476-a33d9dae-b67b-475a-a258-86b62d1144d6.png)
+
+ we will explain about `person-registor.component.ts` in the next section.
+ 
