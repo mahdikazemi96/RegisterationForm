@@ -374,3 +374,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
    > we use `(change)="onChange(personality.id,$any($event.target)?.checked)"` to send the personality id and the checkbox status to `person-registor.component.ts` and define a method with the name: `onChange` in the `person-registor.component.ts` file.
  
    > we should have a mechanism to can clear all checkboxes so we need to give a unique id to each checkbox and because of that I used this pattern `id="chb{{personality.id}}"` so all of my checkboxes ids start with *chb* for example: `chb1`, `chb2`, `chb3`, ...
+ 
+- the submit button: `<button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid">Submit</button>`
+   > we want to prevent submitting the form if our inputs were invalid. so I used `[disabled]="form.invalid"`>>> *form* point to ngModel of form which we initialized it in the first line of `person-registor.component.html`.
+   > when the user click on this button the *submitPerson(form)* will be hitted.
