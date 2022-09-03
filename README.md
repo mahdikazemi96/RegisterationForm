@@ -329,5 +329,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
  - first we complete the html file. go to path: `src/app/person/person-register` and open `person-registor.component.html` file and complete it like blow code:
  ![image](https://user-images.githubusercontent.com/30793006/188192828-5fe86916-dcd4-4441-8f6a-d65ff3dd58bb.png)
-** now I'm gonna explain what I did in this file:**
+**now I'm gonna explain what I did in this file:**
+- the form:
 > we have a form and because I want to access the form in all of other parts of the form so I declare a `#form` as angular model for access in the html file just like this: `#form="ngForm"`
+
+> I want to send all form inputs data to the server so I used angular `(submit)` event and defined a *submitPerson()* method to send form data to the *person-registor.component.ts*.
