@@ -420,5 +420,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - the *ngOnInit()* method: use it to initialize the objects and initializing *personalities* by calling the *get* method from *personality-service*:   `this.personalitySevice.get();`
  
 - the *onChange()* method for checkboxes:
+ 
   ![image](https://user-images.githubusercontent.com/30793006/188320403-fbe0e96a-b853-4d3a-a54b-5678e434515e.png)
-  this method gets a *personality id* and *isChecked* as entry parameters. then we check if that personality item is checked we push it to the person personalities that is initialized in the *person-service*.
+  this method gets a *personality id* and *isChecked* as entry parameters. then we check if that personality item is checked we push it to the person personalities that is initialized in the *person-service*. and if the *isChecked* was false it means the user unselected that personality so we should remove it from the person personalities and for this first we find the index of that personality in person personalities and then remove it by the index number.
+ 
