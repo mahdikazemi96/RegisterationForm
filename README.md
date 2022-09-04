@@ -410,7 +410,6 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
  the **genders** object is needed to keep all genders ids because we need the gender id to send the selected genders to server side application.
  the **enums** object is used to fill **genders** object just like this: 
- 
  `this.genders = Object.keys(this.enums).filter(x => parseInt(x) >= 0).map(Number);`
  
  
