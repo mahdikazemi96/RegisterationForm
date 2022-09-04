@@ -328,6 +328,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
  ### Implement Person Registeration Form (html file)
  in this section we need a form with multi types of html inputs to add new person or edit previous person added. so create a new component with name: `person-register` with this command: `ng g c person-register`.
  
+ in this section I will explain the html file and in the next section I will explain about typescript part.
+ 
  - first we complete the html file. go to path: `src/app/person/person-register` and open `person-registor.component.html` file and complete it like blow code:
  ![image](https://user-images.githubusercontent.com/30793006/188192828-5fe86916-dcd4-4441-8f6a-d65ff3dd58bb.png)
 **now I'm gonna explain what I did in this file:**
@@ -379,3 +381,12 @@ now you have a folder with name *person-info* in your angular app. let's start w
 - the submit button: `<button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid">Submit</button>`
    > we want to prevent submitting the form if our inputs were invalid. so I used `[disabled]="form.invalid"`>>> *form* point to ngModel of form which we initialized it in the first line of `person-registor.component.html`.
    > when the user click on this button the *submitPerson(form)* will be hitted.
+ ### Implement Person Registeration Form (typescript file)
+ now we want to complete the `person-registor.component.ts`, so open this file.
+ 
+ - first of all we import necessory refrences:
+  `import { PersonServiceService } from '../service/person-service.service';
+   import { NgForm } from '@angular/forms';
+   import { Gender } from '../model/Gender';
+   import { Status } from '../model/Status';
+   import { PersonalityServiceService } from '../service/personality-service.service';`
