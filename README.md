@@ -431,4 +431,4 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   we know that we should use this form as *Registre Form* and as *Update Form* so we sould recognize that when we should *Register* and when should *Update*. we will recognize it by the person id, if the person id had value it means the user before clicks on the *Submit* button he/she clicked on the edit button and because of that the app filled the id field and if the id didn't have value it means the user is registering new person.
  
- finally when the form submitted we reset the form to clear all inputs.
+  finally when the form submitted we reset the form to clear all inputs.
