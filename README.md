@@ -395,3 +395,9 @@ now you have a folder with name *person-info* in your angular app. let's start w
   `import { Status } from '../model/Status';`
  
   `import { PersonalityServiceService } from '../service/personality-service.service';`
+ 
+  we import *NgForm* because we pass the form html to the typescript file by *Angular* and then we can clear the form inputs:
+ 
+ `  resetForm(form: NgForm) {
+    form.form.reset();
+  }`
