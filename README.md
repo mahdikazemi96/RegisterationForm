@@ -425,3 +425,8 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   this method gets a *personality id* and *isChecked* as entry parameters. then we check if that personality item is checked we push it to the person personalities that is initialized in the *person-service*. and if the *isChecked* was false it means the user unselected that personality so we should remove it from the person personalities and for this first we find the index of that personality in person personalities and then remove it by the index number.
  
+- the *submitPerson()* and *resetForm()* methods:
+ 
+  ![image](https://user-images.githubusercontent.com/30793006/188321049-2eabd596-870f-4ac0-a032-a3417628bf2c.png)
+ 
+  we know that we should uise this form as *Registre Form* and as *Update Form* so we sould recognize that when we should *Register* and when should *Update*. we will recognize it by the person id, if the person id had value it means the user before clicks on the *Submit* button he/she clicked on the edit button and because of that the app filled the id field and if the id didn't have value it means the user is registering new person.
