@@ -21,7 +21,8 @@
   * [Implement Service Layer](#Implement-Service-Layer)
 * [Implement UI Layer](#Implement-UI-Layer)
   * [Implement Person Info Table](#Implement-Person-Info-Table)
-  * [Implement Person Registeration Form](#Implement-Person-Registeration-Form)
+  * [Implement Person Registeration Form (html file)](#Implement-Person-Registeration-Form-(html-file))
+  * [Implement Person Registeration Form (typescript file)](#Implement-Person-Registeration-Form-(typescript-file))
 <!-- * [License](#license) -->
 
 
