@@ -384,7 +384,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  ### Implement Person Registeration Form (typescript file)
  now we want to complete the `person-registor.component.ts`, so open this file.
  
- - first of all we import necessory refrences:
+- first of all we import necessory refrences:
  
   `import { PersonServiceService } from '../service/person-service.service';`
  
