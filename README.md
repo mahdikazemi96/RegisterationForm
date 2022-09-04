@@ -291,7 +291,7 @@ ok so execute these command to create your services:
 ## Implement UI Layer
 Ok now it's time to implement the UI layer. first we should know what do we want in our application UI. I want to have a single page application and do all of my work in one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw in the <a href="#screenshots">Screenshots section</a>.
 
-### Implement Person Info Table (html file)
+### Implement Person Info Table
 we need a table to show all of our person registerd in database so we need a part in our angular app that can show a table with all person data an can use the infrustructure layer to connect to server side app. for this we create a component with this command and name it *person-info* in the path **src/app/person**:
 
 `ng g c person-info`
@@ -325,7 +325,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
 - we will implement the *showPerson()* method after *person-register* implementation.
  
- ### Implement Person Registeration Form
+ ### Implement Person Registeration Form (html file)
  in this section we need a form with multi types of html inputs to add new person or edit previous person added. so create a new component with name: `person-register` with this command: `ng g c person-register`.
  
  - first we complete the html file. go to path: `src/app/person/person-register` and open `person-registor.component.html` file and complete it like blow code:
