@@ -414,5 +414,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  and ofcourse we use the **enums** object to map the an gender enum to text in html as you saw in the previous section.
  
 - the constructor: `constructor(public service: PersonServiceService,public personalitySevice:PersonalityServiceService)`
+ 
  inject the *PersonServiceService* and *PersonalityServiceService* to can use them.
  
+- the *ngOnInit()* method: use it to initialize the objects and initializing *personalities* by calling the *get* method from *personality-service*: `this.personalitySevice.get();`
