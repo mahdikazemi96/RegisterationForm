@@ -408,13 +408,13 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   `enums = Gender;`
  
- the **genders** object is needed to keep all genders ids because we need the gender id to send the selected genders to server side application.
- the **enums** object is used to fill **genders** object just like this: <br/>
+  the **genders** object is needed to keep all genders ids because we need the gender id to send the selected genders to server side application.
+  the **enums** object is used to fill **genders** object just like this: <br/>
  `this.genders = Object.keys(this.enums).filter(x => parseInt(x) >= 0).map(Number);`
- and ofcourse we use the **enums** object to map the an gender enum to text in html as you saw in the previous section.
+  and ofcourse we use the **enums** object to map the an gender enum to text in html as you saw in the previous section.
  
 - the constructor: `constructor(public service: PersonServiceService,public personalitySevice:PersonalityServiceService)`
  
- inject the *PersonServiceService* and *PersonalityServiceService* to can use them.
+  inject the *PersonServiceService* and *PersonalityServiceService* to can use them.
  
-- the *ngOnInit()* method: use it to initialize the objects and initializing *personalities* by calling the *get* method from *personality-service*: `this.personalitySevice.get();`
+- the *ngOnInit()* method: use it to initialize the objects and initializing *personalities* by calling the *get* method from *personality-service*:   `this.personalitySevice.get();`
