@@ -398,9 +398,9 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   we import *NgForm* because we pass the form html to the typescript file by *Angular* and then we can clear the form inputs:
  
- `  resetForm(form: NgForm) {
-    form.form.reset();
-  }`
+  `  resetForm(form: NgForm) {
+     form.form.reset();
+   }`
 - initiazizing *Gender* dropdown list :
  we need to define two objects:
  
