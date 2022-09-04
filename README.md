@@ -401,3 +401,9 @@ now you have a folder with name *person-info* in your angular app. let's start w
  `  resetForm(form: NgForm) {
     form.form.reset();
   }`
+- initiazizing *Gender* dropdown list :
+ we need to define two objects:
+ 
+  `genders: number[] = [];`
+ 
+  `enums = Gender;`
