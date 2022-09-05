@@ -6,6 +6,7 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
+* [Who is it suitable for?](#Who-is-it-suitable-for?)
 * [What do you learn in this project?](#what-do-you-learn-in-this-project)
 * [Screenshots](#screenshots)
 * [What does this application do?](#What-does-this-application-do)
@@ -45,6 +46,7 @@
 ## Features
 - CRUD Operation
 
+## Who is it suitable for?
 
 ## What do you learn in this project?
 - How to design a multi layers project with clean architecture
