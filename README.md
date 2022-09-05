@@ -400,6 +400,10 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   `import { PersonalityServiceService } from '../service/personality-service.service';`
  
+  because we want to use ngForm so we should add the FormsModule to the project, go to path `src/app` and open the file `app.module.ts` then add the module just like this:
+ 
+   ![image](https://user-images.githubusercontent.com/30793006/188390422-d7f5bd35-7df7-49e0-9407-fb96c2d9c37d.png)
+ 
   we import *NgForm* because we pass the form html to the typescript file by *Angular* and then we can clear the form inputs:
  
   `  resetForm(form: NgForm) {
