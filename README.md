@@ -274,6 +274,10 @@ ok so execute these command to create your services:
 `ng g s person-service` and `ng g s personality-service`
 
 > first we implement the person-service
+- add HttpClientModule to the angular app, go to path `src/app` and open the file `app.module.ts` and add HttpClientModule just like this:
+
+ ![image](https://user-images.githubusercontent.com/30793006/188385377-b621769a-cfa1-4d64-98a3-31a16eaf1515.png)
+
 - add HttpClient library to this service: `import { HttpClient } from '@angular/common/http'` this library lets you to send http request to server.
 - inject this library in the *person-service* constructor to can use it.
 - in this service we work with an object of *Person* or an object of a *List of Person* so we create an object for each one of them. just like this:
