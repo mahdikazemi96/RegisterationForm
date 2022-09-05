@@ -73,7 +73,7 @@ At the first step we Create a blank solution in visual studio the add the projec
 
 > a class library with the name *IoC* to handle our dependency injections in one layer
 
-> a class library with the name *BL* to implement our business roles 
+> a class library with the name *BL* to implement our business rules 
 
 > a web api .net core to implement our apis
 
