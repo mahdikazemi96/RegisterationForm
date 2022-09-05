@@ -162,7 +162,7 @@ then inject this class in *Api* layer like this:
 > You are done with *UnitOfWork*.
 
 ## Implement BL Layer
-Now it's time to implement *BL* layer according to our business roles and our senarios for *CRUD* operations.
+Now it's time to implement *BL* layer according to our business rules and our senarios for *CRUD* operations.
 *Note:* it's not good to return database model to api, it's better to convert your database model to dto (data transfer object).
 it's better to have one or more dtos per senario.
 
@@ -203,7 +203,7 @@ after all these steps don't forget inject your Businesses class in *IoC* layer s
 
 
 ## Implement Api Layer
-The api layer is communication bridge to out and tis the layer that serve data for other applications that communicate with your project.
+The api layer is communication bridge to out and it is the layer that serve data for other applications which communicate with your project.
 base on our senarios we need 2 controllers one with name *PersonController* and the other with name *PersonalityController*.
 
 we have 5 methods in *PersonController* and 1 method in *PersonalityController* that it's clear what they do.
@@ -221,12 +221,12 @@ We are completely done about the backend so now it's turn to implement the UI, l
 
 I choosed bootstrap 5 for design UI and Angular 13 to connect the UI to Backend. 
 
-as you know *Angular*  is based on *Typescript*. so we use *Typescript* language to develop this angular app and also most of or files type are *Typescript*.
+as you know *Angular*  is based on *Typescript*. so we use *Typescript* language to develop this angular app and also most of our files type are *Typescript*.
 
 So follow these steps:
 
 - to run angular app you need to install nodejs so go to https://nodejs.org/en/download/ and download then install it.
-- after installing nodejs you should install angular cli to be able to complie angular code. you can install it with this command `npm install -g @angular/cli`.
+- after installing nodejs you should install angular cli to be able to compile angular code. you can install it with this command `npm install -g @angular/cli`.
 - create a folder with name *RegisterationForm.UI*.
 - run powershell with *administrator* mode and route to the *RegisterationForm.UI* path then execute the command `ng new UI`.
 - after executing the command it starts to download necessory files and asks some questions as follow:
@@ -297,7 +297,7 @@ ok so execute these command to create your services:
 
 - create 4 method to do the *CRUD* operation.
 
-- please note that the *person* object in this service will be initialize in our components such as *person-info component* or *person-registor component*, but the *allPerson* object initializes in this service by the *get()* method. so we send the *person* object to the server wich initialized in the *person-registor component* and initialize the *allPerson* in this service and show it in the table by *person-info component*.(please see the code)
+- please note that the *person* object in this service will be initialized in our components such as *person-info component* or *person-registor component*, but the *allPerson* object initializes in this service by the *get()* method. so we send the *person* object to the server wich initialized in the *person-registor component* and initialize the *allPerson* in this service and show it in the table by *person-info component*.(please see the code)
 
 > second we implement the personality-service:
 - this is just as like as *person-service* but we have only a *get()* method to initialize a list of *all personalities* to show in the *registeration form*.(please see the code)
@@ -348,7 +348,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
 **now I'm gonna explain what I did in this file:**
  
 - the form: `<form novalidate autocomplete="off" #form="ngForm" (submit)="submitPerson(form)"> `
-  > we have a form and because I want to access the form in all of other parts of the form so I declare a `#form` as angular model for access in the html file just like this: `#form="ngForm"`
+  > we have a form and because I want to access the form in all of other parts of the form so I declare a `#form` as angular form for access in the html file just like this: `#form="ngForm"`
 
   > I want to send all form inputs data to the server so I used angular `(submit)` event and defined a *submitPerson()* method to send form data to the *person-registor.component.ts*.
  
