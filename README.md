@@ -86,7 +86,7 @@ This is our data diagram:
 We have 3 tables:
 > *Person* is the table that keeps person data.
 
-> *Personality* is the table that keeps the personalities types.(We don't have any form for crud operations on this table and it get feed direct from Sql Server Management Studio)
+> *Personality* is the table that keeps the personalities types.(We don't have any form for crud operations on this table and it gets feed direct from Sql Server Management Studio)
 
 > *PersonPersonality* is the table that keep the data that each person has how many type of personalities.
 
