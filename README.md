@@ -127,7 +127,8 @@ before start we should install necessory packages. install these packages on DAL
 
 `builder.Services.AddDatabaseConfig(configuration);`
 
-> now we need create database and tables by ef. before use migration you should install *Microsoft.EntityFrameworkCore.Design* on Api layer because it's needed.
+> now we need create database and tables by ef. before use migration you should install 
+> *Microsoft.EntityFrameworkCore.Design* on Api layer because it's needed.
 
 > now you can go to *Package Manager Console* and write the first add migration code like this: *Add-Migrations InitializeDb*
 
