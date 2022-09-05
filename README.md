@@ -146,11 +146,11 @@ We use UnitOfWork pattern to work with data such as (get, write, update or delet
 
 ![image](https://user-images.githubusercontent.com/30793006/182314749-6c76c23e-f58c-4553-8e15-053a2819da0a.png)
 
-> Ok now it's time to implementation. go to *DAL* layer and create a folder with name *UnitOfWork* the create 2 classes with name GenericRepository and UnitOfWork the implement your interfaces that you made in *Infrastructure* layer.
+> Ok now it's time to implementation. go to *DAL* layer and create a folder with name *UnitOfWork* then create 2 classes with name GenericRepository and UnitOfWork then implement your interfaces that you made in *Infrastructure* layer.
 
 >>don't forget that IUnitOfWork interface and UnitOfWork class both should inherit from *IDisposable* so when the UnitOfWork finished  with database it can free unmanaged resources.
 
-> at the last ste you should inject the UnitOfWork in *IoC* layer and then in *Api* layer. so Create a class with name UnitOfWorkConfig in *IoC* layer and inject the unitofwork like this:
+> at the last step you should inject the UnitOfWork in *IoC* layer and then in *Api* layer. so Create a class with name UnitOfWorkConfig in *IoC* layer and inject the unitofwork like this:
 
 ![image](https://user-images.githubusercontent.com/30793006/182325601-b35054f1-cec3-4f18-818b-d86c83130bed.png)
 
