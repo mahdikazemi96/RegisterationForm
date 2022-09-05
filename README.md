@@ -47,6 +47,7 @@
 - CRUD Operation
 
 ## Who is it suitable for?
+for developers who are familiar with Angular, Asp.Net Core, REST Apis, C#, Database.
 
 ## What do you learn in this project?
 - How to design a multi layers project with clean architecture
