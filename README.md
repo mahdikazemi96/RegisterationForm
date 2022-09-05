@@ -116,7 +116,7 @@ before start we should install necessory packages. install these packages on DAL
 
 > now we should connect our context to databse. for this one we should do it in the layer that injects the services(here, IoC layer). for this you need install the package
 
- *Microsoft.Extensions.DependencyInjection.Abstractions* on *IoC Project*
+> *Microsoft.Extensions.DependencyInjection.Abstractions* on *IoC Project*
  
  then we create a class with name DbConfig in the *IoC Project* and use the ef core service to connect our database context to database. like this:
 
