@@ -94,7 +94,7 @@ we want to create these tables by entity framework code first and also we need a
 
 ![image](https://user-images.githubusercontent.com/30793006/182153818-9278e716-1f06-4bee-a85c-194a7000891a.png)
 
-> in the *Person* model I put two properties with names: **personalities** and **personalitiesIds**. the **personalities** is to combine all person personality in one string and show it in table and the **personalitiesIds** is use to when we want edit one person info. as we do not save these properties in database so I used the *[NotMapped]* for these propeties.
+> in the *Person* model I put two properties with names: **personalities** and **personalitiesIds**. the **personalities** is to combine all person personality in one string and show it in table and the **personalitiesIds** is used because we need each personality id in the client side application and when we want edit one person info. as we do not save these properties in database so I used the *[NotMapped]* for these propeties.
 
 > as we don't have any base table for *gender* and *status* in *Person* table so we create two enums for these fileds.
 
