@@ -363,7 +363,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   > the `[(ngModel)]="service.person.name"` is used to bind the value of this input to the person that is already generated in *person-service*, with this method you can access the value inserted by user in the *person-register.component.ts* and reverse.
  
-  > the `[class.invalid]` is an Angular validtor that indicates the considered input changes to *red* coller when ever it was invalid, you should declare the invalidity situation in this validator and I declaed as `name.invalid &#038;&#038; name.touched` and it means when ever the input with '#name' ngModel was empty or the min length was less than 3 or more than 10 character make this input red.
+  > the `[class.invalid]` is an Angular validtor that indicates the considered input changes to *red* coller when ever it was invalid, you should declare the invalidity situation in this validator and I declared as `name.invalid &#038;&#038; name.touched` and it means when ever the input with '#name' ngModel was empty or the min length was less than 3 or more than 10 character make this input red.
 
 - for gender I used dropdown list to show you how can you use dropdown in angular:
  
@@ -389,7 +389,7 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
    > we use `(change)="onChange(personality.id,$any($event.target)?.checked)"` to send the personality id and the checkbox status to `person-registor.component.ts` and define a method with the name: `onChange` in the `person-registor.component.ts` file.
  
-   > we should have a mechanism to can clear all checkboxes so we need to give a unique id to each checkbox and because of that I used this pattern `id="chb{{personality.id}}"` so all of my checkboxes ids start with *chb* for example: `chb1`, `chb2`, `chb3`, ...
+   > we should have a mechanism to can clear all checkboxes so we need to give a unique id to each checkbox and because of that I used this pattern `id="chb{{personality.id}}"` so all of my checkboxes ids start with **chb** for example: `chb1`, `chb2`, `chb3`, ...
  
 - the submit button: `<button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid">Submit</button>`
    > we want to prevent submitting the form if our inputs were invalid. so I used `[disabled]="form.invalid"`>>> *form* point to ngModel of form which we initialized it in the first line of `person-registor.component.html`.
@@ -446,6 +446,6 @@ now you have a folder with name *person-info* in your angular app. let's start w
  
   ![image](https://user-images.githubusercontent.com/30793006/188321049-2eabd596-870f-4ac0-a032-a3417628bf2c.png)
  
-  we know that we should use this form as *Registre Form* and as *Update Form* so we sould recognize that when we should *Register* and when should *Update*. we will recognize it by the person id, if the person id had value it means the user before clicks on the *Submit* button he/she clicked on the edit button and because of that the app filled the id field and if the id didn't have value it means the user is registering new person.
+  we know that we should use this form as *Registre Form* and as *Update Form* so we should recognize that when we should *Register* and when should *Update*. we will recognize it by the person id, if the person id had value it means the user before clicks on the *Submit* button he/she clicked on the edit button and because of that the app filled the id field and if the id didn't have value it means the user is registering new person.
  
   finally when the form submitted we reset the form to clear all inputs.
