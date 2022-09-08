@@ -399,11 +399,11 @@ now you have a folder with the name *person-info* in your angular app. let's sta
    > we want to prevent submitting the form if our inputs were invalid. so I used `[disabled]="form.invalid"`>>> *form* point to ngModel of form which we initialized in the first line of `person-registor.component.html`.
    > when the user clicks on this button the *submitPerson(form)* will be hit.
 - in all components you can find a *.css* file this file is for styling to the component html file. in this component we want to make my form left aligned so open the file `person-register.component.cs` file and write blow code:
- ```
+  ```
  .text-left{
     text-align: left !important;
 }
- ```
+  ```
  ### Implement Person Registration Form (typescript file)
  now we want to complete the `person-registor.component.ts`, so open this file.
  
