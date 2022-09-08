@@ -39,7 +39,7 @@ namespace RegisterationForm.DAL.UnitOfWork
                 query = include(query);
             }
 
-            return query.FirstOrDefault(expression);
+            return query?.FirstOrDefault(expression);
         }
 
         public async Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
@@ -54,7 +54,7 @@ namespace RegisterationForm.DAL.UnitOfWork
                 query = query.Where(expression);
             }
 
-            return await query.ToListAsync();
+            return await query?.ToListAsync();
         }
 
         public IList<T> GetAll(Expression<Func<T, bool>> expression = null, Func<IQueryable<T>, IIncludableQueryable<T, object>> include = null)
@@ -69,7 +69,7 @@ namespace RegisterationForm.DAL.UnitOfWork
                 query = query.Where(expression);
             }
 
-            return query.ToList();
+            return query?.ToList();
         }
 
         public void Insert(T entity)

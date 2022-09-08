@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { PersonRegistorComponent } from './Person/person-register/person-register.component';
+import { PersonInfoComponent } from './Person/person-info/person-info.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonRegistorComponent,
+    PersonInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

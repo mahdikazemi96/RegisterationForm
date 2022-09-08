@@ -1,0 +1,54 @@
+<form novalidate autocomplete="off" #form="ngForm" (submit)="submitPerson(form)"> 
+    <div class="row">
+        <div class="row">
+            <input type="hidden" name="id" [value]="service.person.id">
+            <div class="mb-3 col-sm-6 text-left">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" #name="ngModel" [(ngModel)]="service.person.name"
+                required minlength="3" maxlength="10" [class.invalid]="name.invalid &#038;&#038; name.touched">
+            </div>
+            <div class="mb-3 col-sm-6 text-left">
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age" #age="ngModel" [(ngModel)]="service.person.age"
+                required min="1" max="100" [class.invalid]="age.invalid &#038;&#038; age.touched">
+            </div>
+
+            <div class="mb-3 col-sm-6 text-left">
+                <label for="gender" class="form-label">Gender:</label>
+                <br>
+                <select [(ngModel)]="service.person.gender" name="gender" id="gender" #gender="ngModel"  class="form-select" required [class.invalid]="gender.invalid &#038;&#038; gender.touched">
+                    <option *ngFor="let key of genders" [ngValue]="key">{{genderEnums[key]}}</option>
+                </select>
+            </div>
+
+            <div class="mb-3 col-sm-6 text-left">
+                <label for="status" class="form-label">Status:</label>
+                <br>
+                <div class="form-check form-check-inline" *ngFor="let status of statuses">
+                    <input class="form-check-input" type="radio" name="status" id="status" [value]="status" #status="ngModel" [(ngModel)]="service.person.status" required >
+                    <label class="form-check-label" for="inlineRadio1">{{statsEnums[status]}}</label>
+                </div>
+            </div>
+
+            <div class="mb-3 col-sm-12 text-left">
+                <label for="status" class="form-label">Personality:</label>
+                <br>
+                <div class="form-check form-check-inline" *ngFor="let personality of personalitySevice.allPersonality">
+                    <input class="form-check-input" type="checkbox"  [value]=""  required  (change)="onChange(personality.id,$any($event.target)?.checked)" id="chb{{personality.id}}">
+                    <label class="form-check-label" for="inlineRadio1">{{personality.title}}</label>
+                </div>
+            </div>
+
+            <div class="mb-3 col-sm-12 text-left">
+                <label for="address" class="form-label">Address:</label>
+                <textarea type="address" class="form-control" id="address" placeholder="Enter Address" name="address" #address="ngModel" [(ngModel)]="service.person.address"
+                required minlength="5" max="100" [class.invalid]="address.invalid &#038;&#038; address.touched"></textarea>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</form>

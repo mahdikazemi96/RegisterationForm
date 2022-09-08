@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Gender</th>
+        <th>Status</th>
+        <th>Personlity</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of service.allPerson">
+        <td>{{person.name}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.address}}</td>
+        <td>{{gender[person.gender]}}</td>
+        <td>{{status[person.status]}}</td>
+        <td>{{person.personalities}}</td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" style="cursor:pointer" (click)="deletePerson(person.id)"></i>
+            &nbsp;
+            <i class="far fa-edit fa-lg text-info" style="cursor:pointer" (click)="showPerson(person)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
