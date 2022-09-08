@@ -268,9 +268,6 @@ route to *Person* path: `cd src/app/person`
 
 - also we need a folder with the name: **service**. we will create some services to connect to our backend and do *CRUD* operations. so create it in this path: `src/app/person`
 
-- create a component for the table with this command: `ng g c person-info` in this component we will implement our table
-
-- create a component for the form with this command: `ng g c person-register` in this component we will implement our form to register and update the registered person
 
 ### Create Models
 as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section</a> we had a model for *Person* another model for *Personality* and we had two *Enums* for *Gender* and *Status* so we create these four models in our angular app.
