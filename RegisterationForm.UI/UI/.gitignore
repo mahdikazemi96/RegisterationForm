@@ -8,7 +8,7 @@
 /bazel-out
 
 # dependencies
-/node_modules
+
 
 # profiling files
 chrome-profiler-events*.json
@@ -23,14 +23,10 @@ chrome-profiler-events*.json
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 .history/*
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage
