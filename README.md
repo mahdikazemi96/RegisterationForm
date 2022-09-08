@@ -24,6 +24,7 @@
   * [Implement Person Info Table](#Implement-Person-Info-Table)
   * [Implement Person Registration Form (html file)](#Implement-Person-Registeration-Form-html-file)
   * [Implement Person Registration Form (typescript file)](#Implement-Person-Registeration-Form-typescript-file)
+* [Final Step](#Final-Step)
 <!-- * [License](#license) -->
 
 
@@ -235,13 +236,19 @@ So follow these steps:
 - I use **Visual Studio Code** to develop my angular app, so open the VS Code go to *File >>> Open Folder* then route to *PersonRegisterationForm.UI/UI* and click the *Select Folder* button, then you can see your angular app in the VS Code.
 - go to the path `/src` in VS Code and open the file *index.html* then put the bootstrap stylesheets link in the header:
 
-  `<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">`
+  ```
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  ```
   
-  `<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />`
+  ```
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  ```
   
   and put the js file in the body:
   
-  `<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>`
+  ```
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  ```
   
 #### now we are done with initializing the UI. the next step is implementing this layer.
 
@@ -262,9 +269,6 @@ route to *Person* path: `cd src/app/person`
 
 - also we need a folder with the name: **service**. we will create some services to connect to our backend and do *CRUD* operations. so create it in this path: `src/app/person`
 
-- create a component for the table with this command: `ng g c person-info` in this component we will implement our table
-
-- create a component for the form with this command: `ng g c person-register` in this component we will implement our form to register and update the registered person
 
 ### Create Models
 as you remember in <a href="#Develop-Domain-Layer">Develop Domain Layer Section</a> we had a model for *Person* another model for *Personality* and we had two *Enums* for *Gender* and *Status* so we create these four models in our angular app.
@@ -394,6 +398,12 @@ now you have a folder with the name *person-info* in your angular app. let's sta
 - the submit button: `<button type="submit" class="btn btn-primary btn-block" [disabled]="form.invalid">Submit</button>`
    > we want to prevent submitting the form if our inputs were invalid. so I used `[disabled]="form.invalid"`>>> *form* point to ngModel of form which we initialized in the first line of `person-registor.component.html`.
    > when the user clicks on this button the *submitPerson(form)* will be hit.
+- in all components, you can find a .css file this file is for styling the component html file. in this component, we want to make my form left aligned so open the file person-register.component.cs file and write below code:
+  ```
+  .text-left{
+    text-align: left !important;
+  }
+  ```
  ### Implement Person Registration Form (typescript file)
  now we want to complete the `person-registor.component.ts`, so open this file.
  
@@ -449,3 +459,29 @@ now you have a folder with the name *person-info* in your angular app. let's sta
   we know that we should use this form as *Registre Form* and as *Update Form* so we should recognize when we should *Register* and when should *Update*. we will recognize it by the person id, if the person id had value it means the user before clicking on the *Submit* button he/she clicked on the edit button and because of that the app filled the id field and if the id didn't have value it means the user is registering new person.
  
   finally, when the form is submitted we reset the form to clear all inputs.
+ 
+## Final Step
+now you are done with *person-register* and *person-info* components and now you need to add these components to the application first page for this one you should go to path `src/app/app.component.html` and write blow code:
+```
+ <div class="container-fluid p-5 bg-primary text-white text-center">
+  <h1>Person Registeration</h1>
+  <p>You Can Register Person Info in This App!</p>
+</div>
+
+<div class="container mt-5 text-center">
+  <div class="row">
+    <div class="col-sm-6">
+      <app-person-info></app-person-info>
+    </div>
+    <div class="col-sm-6">
+      <app-person-registor></app-person-registor>
+    </div>
+  </div>
+</div>
+ ```
+ 
+ > the `<app-person-info></app-person-info>` points to the `person-info` component and if you look at the `person-info.component.ts` you see that **app-person-info** is declared in this file like this:
+ 
+ ![image](https://user-images.githubusercontent.com/30793006/189117584-42e16d17-3f94-4ccb-a6a5-aa875a9be2a4.png)
+
+ 
