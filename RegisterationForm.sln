@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegisterationForm.Api", "Re
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RegisterationForm.UI", "RegisterationForm.UI\", "{155D85CB-6DD7-4ACA-8072-AECA5BEA2728}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_7631"
 		Debug.AspNetCompiler.PhysicalPath = "RegisterationForm.UI\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7631\"
