@@ -329,7 +329,7 @@ now you have a folder with the name *person-info* in your angular app. let's sta
 
 ![image](https://user-images.githubusercontent.com/30793006/187896167-a1f270f0-8d12-4357-854d-7d51cc601354.png)
 
-> as you see I used *ngFor* in the *<tbody>*, we use *ngFor* to create **loops** and here we have an object of a list of *person* in *person-service* and we want to create a loop on this object so we use *ngFor*. 
+> as you see I used *ngFor* in the `<tbody>`, we use *ngFor* to create **loops** and here we have an object of a list of *person* in *person-service* and we want to create a loop on this object so we use *ngFor*. 
  
 > as I said in previous steps the person's gender and status are the types of enum and when you get all person from api the server side sends gender and status as an enum to your angular application and you should map this enum to text, for this one I used the objects that I created in *person-info.component.ts* and map the enum to text in the *UI* just like this:
  
