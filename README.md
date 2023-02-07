@@ -228,6 +228,7 @@ So follow these steps:
 
 - to run the angular app you need to install node.js so go to https://nodejs.org/en/download/ and download then install it.
 - after installing node.js you should install angular CLI to be able to compile angular code. you can install it with this command `npm install -g @angular/cli`.
+- and also you need to install typescript language package on your computer with this command `npm install typescript --save-dev`
 - create a folder with the name *RegisterationForm.UI*.
 - run powershell with *administrator* mode and route to the *RegisterationForm.UI* path then execute the command `ng new UI`.
 - after executing the command it starts to download the necessary files and asks some questions as follows:
@@ -328,7 +329,7 @@ now you have a folder with the name *person-info* in your angular app. let's sta
 
 ![image](https://user-images.githubusercontent.com/30793006/187896167-a1f270f0-8d12-4357-854d-7d51cc601354.png)
 
-> as you see I used *ngFor* in the *<tbody>*, we use *ngFor* to create **loops** and here we have an object of a list of *person* in *person-service* and we want to create a loop on this object so we use *ngFor*. 
+> as you see I used *ngFor* in the `<tbody>`, we use *ngFor* to create **loops** and here we have an object of a list of *person* in *person-service* and we want to create a loop on this object so we use *ngFor*. 
  
 > as I said in previous steps the person's gender and status are the types of enum and when you get all person from api the server side sends gender and status as an enum to your angular application and you should map this enum to text, for this one I used the objects that I created in *person-info.component.ts* and map the enum to text in the *UI* just like this:
  
