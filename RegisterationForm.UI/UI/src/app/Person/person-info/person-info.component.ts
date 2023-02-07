@@ -32,7 +32,7 @@ export class PersonInfoComponent implements OnInit {
     this.service.person = Object.assign({}, person);
 
     //CHB
-    //برای پاک کردن همه چک باکس ها
+    //To Clear All Checkboxes
     this.personalityService.allPersonality.forEach(element => {
       const checkbox = document.getElementById(
         'chb'+element.id,
@@ -44,7 +44,7 @@ export class PersonInfoComponent implements OnInit {
     });
     
     //CHB
-    //برای انتخاب چک باکس های انتخاب شده هنگام 
+    //To Select The Personalities Already Assigned To The Person
     // Insert
     this.service.person.personalitiesIds.forEach(element => {
       const checkbox = document.getElementById(
