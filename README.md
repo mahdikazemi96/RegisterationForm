@@ -2,7 +2,8 @@
 # RegisterationForm 
 > Clean Architecture + ASP.NET Core 6 Web API + .NET Core 6 Class Library + Angular 13
 
-[![YouTube Video](https://user-images.githubusercontent.com/30793006/221185913-2130da60-4aca-4b89-934e-94044b6d2078.jpg)](https://www.youtube.com/watch?v=eZfjhE_yvzA)
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=eZfjhE_yvzA)
+
 
 
 ## Table of Contents
