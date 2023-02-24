@@ -434,8 +434,6 @@ now you have a folder with the name *person-info* in your angular app. let's sta
   ```
  ### Implement Person Registration Form (typescript file)
  
- [![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=kv1EqcY-BUE)
- 
  now we want to complete the `person-registor.component.ts`, so open this file.
  
 - first of all, we import the necessary references:
@@ -492,6 +490,9 @@ now you have a folder with the name *person-info* in your angular app. let's sta
   finally, when the form is submitted we reset the form to clear all inputs.
  
 ## Final Step
+
+ [![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=kv1EqcY-BUE)
+
 now you are done with *person-register* and *person-info* components and now you need to add these components to the application first page for this one you should go to path `src/app/app.component.html` and write blow code:
 ```
  <div class="container-fluid p-5 bg-primary text-white text-center">
