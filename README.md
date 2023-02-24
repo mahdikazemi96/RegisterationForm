@@ -91,6 +91,9 @@ In the first step we Create a blank solution in the visual studio the add the pr
 ## Develop Domain Layer
 This is our data diagram:
 ![image](https://user-images.githubusercontent.com/30793006/182148220-c85e0e71-6a47-4ad0-937d-7be609547f6b.png)
+
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=YyYRrJH4MG4)
+
 We have 3 tables:
 > *Person* is the table that keeps person data.
 
@@ -108,6 +111,9 @@ we want to create these tables by entity framework code first and also we need a
 
 ## Connect to Database
 Now we want to connect to the database. the *DAL* Layer should be responsible for this one.
+
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=Z_CHl2EekcI)
+
 before starting we should install the necessary packages. install these packages on DAL Project:
 > Microsoft.EntityFrameworkCore
 
@@ -146,6 +152,8 @@ before starting we should install the necessary packages. install these packages
 ## Implement UnitOfWork
 We use the UnitOfWork pattern to work with data such as (get, write, update or delete) so since the UnitOfWork has 2 parts, the first part is *Interface* and the second part is *Implementation* we put the *Interface* in the Infrastructure layer and implement them in the DAL layer.
 
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=9TXS-a14UTQ)
+
 > In the *Infrastructure* layer create a folder with the name *IUnitOfWork* then create 2 interfaces one with the name IGenericRepository and the other with the name IUnitOfWork
 
 > In IGenericRepository you should define all crud methods that you want to use in the project such as (getById, getAll, Insert, ...) and this class is the generic type of *T* that *T* is the name of our table. it means that the *IGenericRepository* can be a polymorphism of any model and your methods can operate for any table of database.
@@ -173,6 +181,8 @@ then inject this class in the *Api* layer like this:
 Now it's time to implement the *BL* layer according to our business rules and our scenarios for *CRUD* operations.
 *Note:* it's not good to return the database model to api, it's better to convert your database model to dto (data transfer object).
 it's better to have one or more dtos per scenario.
+
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=fO09Uuyqubg)
 
 > the first step is installing *Automapper*. why? to convert database model to dto. since the working with data is *DAL* layer duty so we put it in *DAL* layer then install these packages in *DAL* layer: `AutoMapper` and `AutoMapper.Extensions.Microsoft.DependencyInjection` by the nuget package manager.
 
@@ -214,6 +224,8 @@ after all these steps don't forget to inject your Businesses class in the *IoC* 
 The api layer is a communication bridge to out and it is the layer that serves data for other applications which communicate with your project.
 base on our scenarios we need 2 controllers one with the name *PersonController* and the other with the name *PersonalityController*.
 
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=w7w9_jYcCU4)
+
 we have 5 methods in *PersonController* and 1 method in *PersonalityController* that it's clear what they do.
 
 > we used 4 types of http requests in these 2 controllers:
@@ -226,6 +238,8 @@ we have 5 methods in *PersonController* and 1 method in *PersonalityController* 
 
 ## Initialize UI Layer
 We are completely done about the backend so now it's our turn to implement the UI, let's go.
+
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=F6IS-EktvVw)
 
 I chose bootstrap 5 to design UI and Angular 13 to connect the UI to the Backend. 
 
@@ -317,6 +331,9 @@ ok so execute these commands to create your services:
 Ok, now it's time to implement the UI layer. first, we should know what we want in our application UI. I want to have a single-page application and do all of my work on one page, so I want to have a table on the left hand of my application and a form on the right hand of the page just like what you saw on the <a href="#screenshots">Screenshots section</a>.
 
 ### Implement Person Info Table
+
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=vm2Bm-n8LNU)
+
 we need a table to show all of our person registered in the database so we need a part in our angular app that can show a table with all person data and can use the infrastructure layer to connect to the server-side app. for this we create a component with this command and name it *person-info* in the path **src/app/person**:
 
 `ng g c person-info`
@@ -351,6 +368,9 @@ now you have a folder with the name *person-info* in your angular app. let's sta
 - we will implement the *showPerson()* method after *person-register* implementation.
  
  ### Implement Person Registration Form (html file)
+ 
+ [![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=AY0cIEk9C5Q)
+ 
  in this section, we need a form with multi types of html inputs to add a new person or edit the previous person added. so create a new component with the name: `person-register` with this command: `ng g c person-register`.
  
  in this section, I will explain the html file and in the next section, I will explain about typescript part.
@@ -413,6 +433,9 @@ now you have a folder with the name *person-info* in your angular app. let's sta
   }
   ```
  ### Implement Person Registration Form (typescript file)
+ 
+ [![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=kv1EqcY-BUE)
+ 
  now we want to complete the `person-registor.component.ts`, so open this file.
  
 - first of all, we import the necessary references:
