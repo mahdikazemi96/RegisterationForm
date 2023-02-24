@@ -70,6 +70,7 @@ this is a simple single-page application that contains a table and a form. the f
 
 ## Create Projects
 In the first step we Create a blank solution in the visual studio the add the projects as follows:
+[![YouTube Video](https://user-images.githubusercontent.com/30793006/221196492-41f60157-770a-40ee-a14a-09d04150a286.jpg)](https://www.youtube.com/watch?v=puB_p7oWZ1E)
 > a class library with the name *Domain* for our models, dto, ...
 
 > a class library with the name *Infrastructure* for interfaces such as unit of work and other common general operations that are gonna use in other layers
@@ -230,7 +231,7 @@ as you know *Angular*  is based on *Typescript*. so we use *Typescript* language
 
 So follow these steps:
 
-- to run the angular app you need to install node.js so go to https://nodejs.org/en/download/ and download then install it.
+- to run the angular app you need to install node.js so go to https://`/en/download/ and download then install it.
 - after installing node.js you should install angular CLI to be able to compile angular code. you can install it with this command `npm install -g @angular/cli`.
 - and also you need to install typescript language package on your computer with this command `npm install typescript --save-dev`
 - create a folder with the name *RegisterationForm.UI*.
