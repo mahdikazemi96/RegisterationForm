@@ -10,7 +10,7 @@ export class PersonServiceService {
 
   public person: Person = new Person();
   public allPerson: Person[] = [];
-  private readonly baseUrl: string = 'http://localhost:5003/api/people'
+  private readonly baseUrl: string = 'http://localhost:5003/api/person'
 
   constructor(private http: HttpClient) { }
 
@@ -29,6 +29,6 @@ export class PersonServiceService {
   }
 
   delete(personId: number | string) {
-    return this.http.delete(`${this.baseUrl}/${personId}`).subscribe(res => { this.get() }, err => { console.log(err) });
+    return this.http.delete(`${this.baseUrl}?id=${personId}`).subscribe(res => { this.get() }, err => { console.log(err) });
   }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RegisterationForm.BL.Business;
 using RegisterationForm.Domain.RequestDto;
@@ -25,7 +26,7 @@ namespace RegisterationForm.Api.Controllers
             return _personBusiness.GetAllPersonInfo();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name ="GetPerson")]
         public ActionResult<PersonInfoResponseDto> GetPerson(int id)
         {
             if (id == 0)
@@ -40,14 +41,17 @@ namespace RegisterationForm.Api.Controllers
             if (id == 0 || id != person.Id)
                 return BadRequest();
 
-            return Ok(_personBusiness.UpdatePerson(person));
+            _personBusiness.UpdatePerson(person);
+
+            return NoContent();
         }
 
         [HttpPost]
         public IActionResult PostPerson(CreatePersonDto person)
         {
-            _personBusiness.InsertPerson(person);
-            return Ok();
+            var result = _personBusiness.InsertPerson(person);
+
+            return CreatedAtAction("GetPerson", new { id=result.Id},null);
         }
 
         [HttpDelete]
@@ -55,9 +59,10 @@ namespace RegisterationForm.Api.Controllers
         {
             if (id == 0)
                 return BadRequest();
-            else
-                _personBusiness.DeletePerson(id);
-            return Ok();
+
+            _personBusiness.DeletePerson(id);
+
+            return NoContent();
         }
 
 

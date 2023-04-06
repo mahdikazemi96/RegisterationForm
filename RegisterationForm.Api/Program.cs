@@ -10,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 // Add services to the container.
 
+builder.Services.AddCors(o => o.AddPolicy("AllowAll", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -22,7 +24,8 @@ builder.Services.AddAutomapper(configuration);
 builder.Services.AddBsinesses(configuration);
 
 var app = builder.Build();
-
+app.UseRouting();
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

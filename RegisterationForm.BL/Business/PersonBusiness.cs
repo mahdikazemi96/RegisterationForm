@@ -50,13 +50,15 @@ namespace RegisterationForm.BL.Business
             return personDto;
         }
 
-        public void InsertPerson(CreatePersonDto personDto)
+        public Person InsertPerson(CreatePersonDto personDto)
         {
             var person = _mapper.Map<Person>(personDto);
             _unitOfWork.PersonRepository.Insert(person);
             _unitOfWork.Save();
 
             _personPersonalityBusiness.InsertRange(person.Id, personDto.personalitiesIds);
+
+            return person;
         }
 
         public bool UpdatePerson(EditPersonDto person)
