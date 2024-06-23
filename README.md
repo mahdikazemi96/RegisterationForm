@@ -125,7 +125,7 @@ before starting we should install the necessary packages. install these packages
 
 > as you know the database context gets the connection string from the end layer. in this project, our context gets the database connection string from the *Api* layer. so we need to define the database connection string in the file *appsettings.json* in the *Api* layer. like this:
   `"ConnectionStrings": {
-    "RegisterationFormDbContext": "Server=.;Database=RegisterationForm;Trusted_Connection=True;MultipleActiveResultSets=true"
+    "RegisterationFormDbContext": "Server=.;Database=RegisterationForm;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
   }`
 
 > now we should connect our context to the database. for this one, we should do it in the layer that injects the services(here, the IoC layer). for this, you need to install the package
